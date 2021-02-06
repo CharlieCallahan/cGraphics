@@ -7,18 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		381B657025CF056800B7FB07 /* cgLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B656E25CF056800B7FB07 /* cgLog.cpp */; };
-		381B657425CF0C8000B7FB07 /* cgVec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B657225CF0C8000B7FB07 /* cgVec.cpp */; };
-		381B657825CF11DF00B7FB07 /* cgMat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B657625CF11DF00B7FB07 /* cgMat.cpp */; };
-		3843EF5825CCFF20004EAD53 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 3843EF5725CCFF20004EAD53 /* glad.c */; };
+		381B65A025CF4D2E00B7FB07 /* plotWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B658825CF4D2D00B7FB07 /* plotWindow.cpp */; };
+		381B65A125CF4D2E00B7FB07 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B658A25CF4D2D00B7FB07 /* main.cpp */; };
+		381B65A225CF4D2E00B7FB07 /* cgLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B658E25CF4D2D00B7FB07 /* cgLog.cpp */; };
+		381B65A325CF4D2E00B7FB07 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659125CF4D2D00B7FB07 /* Shader.cpp */; };
+		381B65A425CF4D2E00B7FB07 /* cgWindowBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659225CF4D2D00B7FB07 /* cgWindowBase.cpp */; };
+		381B65A525CF4D2E00B7FB07 /* cgVertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659425CF4D2D00B7FB07 /* cgVertexArray.cpp */; };
+		381B65A625CF4D2E00B7FB07 /* cgQuad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659725CF4D2D00B7FB07 /* cgQuad.cpp */; };
+		381B65A725CF4D2E00B7FB07 /* cgVec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659C25CF4D2D00B7FB07 /* cgVec.cpp */; };
+		381B65A825CF4D2E00B7FB07 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 381B659E25CF4D2D00B7FB07 /* glad.c */; };
 		3843EF5C25CD0668004EAD53 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3843EF5A25CD0604004EAD53 /* libglfw.3.3.dylib */; };
 		3843EF5E25CD079D004EAD53 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3843EF5D25CD079D004EAD53 /* OpenGL.framework */; };
-		3843EF6725CD0D67004EAD53 /* cgVertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3843EF6325CD0D66004EAD53 /* cgVertexArray.cpp */; };
-		3843EF6825CD0D67004EAD53 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3843EF6425CD0D66004EAD53 /* Shader.cpp */; };
-		3843EF6925CD0D67004EAD53 /* cgWindowBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3843EF6625CD0D67004EAD53 /* cgWindowBase.cpp */; };
-		3843EF7025CD0DD1004EAD53 /* plotWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3843EF6C25CD0DD1004EAD53 /* plotWindow.cpp */; };
-		3843EF7125CD0DD1004EAD53 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3843EF6D25CD0DD1004EAD53 /* main.cpp */; };
-		3843EF8125CDAD43004EAD53 /* cgQuad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3843EF7F25CDAD43004EAD53 /* cgQuad.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,33 +33,29 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		381B656E25CF056800B7FB07 /* cgLog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cgLog.cpp; sourceTree = "<group>"; };
-		381B656F25CF056800B7FB07 /* cgLog.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cgLog.hpp; sourceTree = "<group>"; };
-		381B657225CF0C8000B7FB07 /* cgVec.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cgVec.cpp; sourceTree = "<group>"; };
-		381B657325CF0C8000B7FB07 /* cgVec.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cgVec.hpp; sourceTree = "<group>"; };
-		381B657525CF10EA00B7FB07 /* cgMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cgMath.h; sourceTree = "<group>"; };
-		381B657625CF11DF00B7FB07 /* cgMat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cgMat.cpp; sourceTree = "<group>"; };
-		381B657725CF11DF00B7FB07 /* cgMat.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cgMat.hpp; sourceTree = "<group>"; };
+		381B658825CF4D2D00B7FB07 /* plotWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plotWindow.cpp; sourceTree = "<group>"; };
+		381B658925CF4D2D00B7FB07 /* default.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = default.vs; sourceTree = "<group>"; };
+		381B658A25CF4D2D00B7FB07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		381B658B25CF4D2D00B7FB07 /* plotWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plotWindow.h; sourceTree = "<group>"; };
+		381B658E25CF4D2D00B7FB07 /* cgLog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cgLog.cpp; sourceTree = "<group>"; };
+		381B658F25CF4D2D00B7FB07 /* cgWindowBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cgWindowBase.h; sourceTree = "<group>"; };
+		381B659025CF4D2D00B7FB07 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		381B659125CF4D2D00B7FB07 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		381B659225CF4D2D00B7FB07 /* cgWindowBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cgWindowBase.cpp; sourceTree = "<group>"; };
+		381B659325CF4D2D00B7FB07 /* cgLog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cgLog.hpp; sourceTree = "<group>"; };
+		381B659425CF4D2D00B7FB07 /* cgVertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cgVertexArray.cpp; sourceTree = "<group>"; };
+		381B659525CF4D2D00B7FB07 /* cgVertexArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cgVertexArray.h; sourceTree = "<group>"; };
+		381B659725CF4D2D00B7FB07 /* cgQuad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cgQuad.cpp; sourceTree = "<group>"; };
+		381B659825CF4D2D00B7FB07 /* cgQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cgQuad.h; sourceTree = "<group>"; };
+		381B659925CF4D2D00B7FB07 /* cgColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cgColor.h; sourceTree = "<group>"; };
+		381B659A25CF4D2D00B7FB07 /* cGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cGraphics.h; sourceTree = "<group>"; };
+		381B659C25CF4D2D00B7FB07 /* cgVec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cgVec.cpp; sourceTree = "<group>"; };
+		381B659D25CF4D2D00B7FB07 /* cgVec.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cgVec.hpp; sourceTree = "<group>"; };
+		381B659E25CF4D2D00B7FB07 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
+		381B659F25CF4D2D00B7FB07 /* default.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = default.fs; sourceTree = "<group>"; };
 		3843EF3E25CCF62E004EAD53 /* cGraphics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cGraphics; sourceTree = BUILT_PRODUCTS_DIR; };
-		3843EF5725CCFF20004EAD53 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
 		3843EF5A25CD0604004EAD53 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../usr/local/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		3843EF5D25CD079D004EAD53 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		3843EF6025CD0D66004EAD53 /* cgVertexArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cgVertexArray.h; path = "../../../Reference/C++_libs/openGL_example_code/cPlot/cGraphics/cgVertexArray.h"; sourceTree = "<group>"; };
-		3843EF6125CD0D66004EAD53 /* cgWindowBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cgWindowBase.h; path = "../../../Reference/C++_libs/openGL_example_code/cPlot/cGraphics/cgWindowBase.h"; sourceTree = "<group>"; };
-		3843EF6225CD0D66004EAD53 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = "../../../Reference/C++_libs/openGL_example_code/cPlot/cGraphics/Shader.h"; sourceTree = "<group>"; };
-		3843EF6325CD0D66004EAD53 /* cgVertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cgVertexArray.cpp; path = "../../../Reference/C++_libs/openGL_example_code/cPlot/cGraphics/cgVertexArray.cpp"; sourceTree = "<group>"; };
-		3843EF6425CD0D66004EAD53 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shader.cpp; path = "../../../Reference/C++_libs/openGL_example_code/cPlot/cGraphics/Shader.cpp"; sourceTree = "<group>"; };
-		3843EF6525CD0D67004EAD53 /* cGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cGraphics.h; path = "../../../Reference/C++_libs/openGL_example_code/cPlot/cGraphics/cGraphics.h"; sourceTree = "<group>"; };
-		3843EF6625CD0D67004EAD53 /* cgWindowBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cgWindowBase.cpp; path = "../../../Reference/C++_libs/openGL_example_code/cPlot/cGraphics/cgWindowBase.cpp"; sourceTree = "<group>"; };
-		3843EF6A25CD0DD1004EAD53 /* default.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = default.vs; path = "../../Reference/C++_libs/openGL_example_code/cPlot/default.vs"; sourceTree = "<group>"; };
-		3843EF6B25CD0DD1004EAD53 /* default.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = default.fs; path = "../../Reference/C++_libs/openGL_example_code/cPlot/default.fs"; sourceTree = "<group>"; };
-		3843EF6C25CD0DD1004EAD53 /* plotWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = plotWindow.cpp; path = "../../Reference/C++_libs/openGL_example_code/cPlot/plotWindow.cpp"; sourceTree = "<group>"; };
-		3843EF6D25CD0DD1004EAD53 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = "../../Reference/C++_libs/openGL_example_code/cPlot/main.cpp"; sourceTree = "<group>"; };
-		3843EF6E25CD0DD1004EAD53 /* plotWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = plotWindow.h; path = "../../Reference/C++_libs/openGL_example_code/cPlot/plotWindow.h"; sourceTree = "<group>"; };
-		3843EF6F25CD0DD1004EAD53 /* lineShader.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = lineShader.vs; path = "../../Reference/C++_libs/openGL_example_code/cPlot/lineShader.vs"; sourceTree = "<group>"; };
-		3843EF7D25CD1E86004EAD53 /* cgColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cgColor.h; sourceTree = "<group>"; };
-		3843EF7F25CDAD43004EAD53 /* cgQuad.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cgQuad.cpp; sourceTree = "<group>"; };
-		3843EF8025CDAD43004EAD53 /* cgQuad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cgQuad.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,14 +71,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		381B657125CF0C5F00B7FB07 /* cgMath */ = {
+		381B658C25CF4D2D00B7FB07 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				381B657225CF0C8000B7FB07 /* cgVec.cpp */,
-				381B657325CF0C8000B7FB07 /* cgVec.hpp */,
-				381B657525CF10EA00B7FB07 /* cgMath.h */,
-				381B657625CF11DF00B7FB07 /* cgMat.cpp */,
-				381B657725CF11DF00B7FB07 /* cgMat.hpp */,
+				381B658D25CF4D2D00B7FB07 /* Render_Level */,
+				381B659625CF4D2D00B7FB07 /* cGraphics_primitives */,
+				381B659A25CF4D2D00B7FB07 /* cGraphics.h */,
+				381B659B25CF4D2D00B7FB07 /* cgMath */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		381B658D25CF4D2D00B7FB07 /* Render_Level */ = {
+			isa = PBXGroup;
+			children = (
+				381B658E25CF4D2D00B7FB07 /* cgLog.cpp */,
+				381B658F25CF4D2D00B7FB07 /* cgWindowBase.h */,
+				381B659025CF4D2D00B7FB07 /* Shader.h */,
+				381B659125CF4D2D00B7FB07 /* Shader.cpp */,
+				381B659225CF4D2D00B7FB07 /* cgWindowBase.cpp */,
+				381B659325CF4D2D00B7FB07 /* cgLog.hpp */,
+				381B659425CF4D2D00B7FB07 /* cgVertexArray.cpp */,
+				381B659525CF4D2D00B7FB07 /* cgVertexArray.h */,
+			);
+			path = Render_Level;
+			sourceTree = "<group>";
+		};
+		381B659625CF4D2D00B7FB07 /* cGraphics_primitives */ = {
+			isa = PBXGroup;
+			children = (
+				381B659725CF4D2D00B7FB07 /* cgQuad.cpp */,
+				381B659825CF4D2D00B7FB07 /* cgQuad.h */,
+				381B659925CF4D2D00B7FB07 /* cgColor.h */,
+			);
+			path = cGraphics_primitives;
+			sourceTree = "<group>";
+		};
+		381B659B25CF4D2D00B7FB07 /* cgMath */ = {
+			isa = PBXGroup;
+			children = (
+				381B659C25CF4D2D00B7FB07 /* cgVec.cpp */,
+				381B659D25CF4D2D00B7FB07 /* cgVec.hpp */,
 			);
 			path = cgMath;
 			sourceTree = "<group>";
@@ -108,14 +136,13 @@
 		3843EF4025CCF62E004EAD53 /* cGraphics */ = {
 			isa = PBXGroup;
 			children = (
-				3843EF6B25CD0DD1004EAD53 /* default.fs */,
-				3843EF6A25CD0DD1004EAD53 /* default.vs */,
-				3843EF6F25CD0DD1004EAD53 /* lineShader.vs */,
-				3843EF6D25CD0DD1004EAD53 /* main.cpp */,
-				3843EF6C25CD0DD1004EAD53 /* plotWindow.cpp */,
-				3843EF6E25CD0DD1004EAD53 /* plotWindow.h */,
-				3843EF5F25CD0D27004EAD53 /* src */,
-				3843EF5725CCFF20004EAD53 /* glad.c */,
+				381B659F25CF4D2D00B7FB07 /* default.fs */,
+				381B658925CF4D2D00B7FB07 /* default.vs */,
+				381B659E25CF4D2D00B7FB07 /* glad.c */,
+				381B658A25CF4D2D00B7FB07 /* main.cpp */,
+				381B658825CF4D2D00B7FB07 /* plotWindow.cpp */,
+				381B658B25CF4D2D00B7FB07 /* plotWindow.h */,
+				381B658C25CF4D2D00B7FB07 /* src */,
 			);
 			path = cGraphics;
 			sourceTree = "<group>";
@@ -127,34 +154,6 @@
 				3843EF5A25CD0604004EAD53 /* libglfw.3.3.dylib */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3843EF5F25CD0D27004EAD53 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				381B657125CF0C5F00B7FB07 /* cgMath */,
-				3843EF7225CD17DC004EAD53 /* cGraphics_primitives */,
-				3843EF6525CD0D67004EAD53 /* cGraphics.h */,
-				3843EF6325CD0D66004EAD53 /* cgVertexArray.cpp */,
-				3843EF6025CD0D66004EAD53 /* cgVertexArray.h */,
-				3843EF6625CD0D67004EAD53 /* cgWindowBase.cpp */,
-				3843EF6125CD0D66004EAD53 /* cgWindowBase.h */,
-				3843EF6425CD0D66004EAD53 /* Shader.cpp */,
-				3843EF6225CD0D66004EAD53 /* Shader.h */,
-				381B656E25CF056800B7FB07 /* cgLog.cpp */,
-				381B656F25CF056800B7FB07 /* cgLog.hpp */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		3843EF7225CD17DC004EAD53 /* cGraphics_primitives */ = {
-			isa = PBXGroup;
-			children = (
-				3843EF7D25CD1E86004EAD53 /* cgColor.h */,
-				3843EF7F25CDAD43004EAD53 /* cgQuad.cpp */,
-				3843EF8025CDAD43004EAD53 /* cgQuad.h */,
-			);
-			path = cGraphics_primitives;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,16 +212,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				381B657425CF0C8000B7FB07 /* cgVec.cpp in Sources */,
-				381B657025CF056800B7FB07 /* cgLog.cpp in Sources */,
-				3843EF8125CDAD43004EAD53 /* cgQuad.cpp in Sources */,
-				3843EF7025CD0DD1004EAD53 /* plotWindow.cpp in Sources */,
-				3843EF6725CD0D67004EAD53 /* cgVertexArray.cpp in Sources */,
-				3843EF6825CD0D67004EAD53 /* Shader.cpp in Sources */,
-				381B657825CF11DF00B7FB07 /* cgMat.cpp in Sources */,
-				3843EF7125CD0DD1004EAD53 /* main.cpp in Sources */,
-				3843EF6925CD0D67004EAD53 /* cgWindowBase.cpp in Sources */,
-				3843EF5825CCFF20004EAD53 /* glad.c in Sources */,
+				381B65A225CF4D2E00B7FB07 /* cgLog.cpp in Sources */,
+				381B65A525CF4D2E00B7FB07 /* cgVertexArray.cpp in Sources */,
+				381B65A725CF4D2E00B7FB07 /* cgVec.cpp in Sources */,
+				381B65A125CF4D2E00B7FB07 /* main.cpp in Sources */,
+				381B65A325CF4D2E00B7FB07 /* Shader.cpp in Sources */,
+				381B65A425CF4D2E00B7FB07 /* cgWindowBase.cpp in Sources */,
+				381B65A025CF4D2E00B7FB07 /* plotWindow.cpp in Sources */,
+				381B65A625CF4D2E00B7FB07 /* cgQuad.cpp in Sources */,
+				381B65A825CF4D2E00B7FB07 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +342,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"$(PROJECT_DIR)/src/Render_Level",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/lib,
@@ -357,7 +358,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"$(PROJECT_DIR)/src/Render_Level",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/lib,
