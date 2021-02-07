@@ -11,6 +11,10 @@ cgVec2::cgVec2(float x,float y){
     this->x = x;
     this->y = y;
 }
+cgVec2::cgVec2(const cgVec2& vector){
+    x = vector.x;
+    y = vector.y;
+}
 cgVec2 cgVec2::operator+(const cgVec2& vector){
     return cgVec2(this->x+vector.x, this->y+vector.y);
 }
@@ -27,6 +31,12 @@ cgVec2 cgVec2::normalized(){
 cgVec2 cgVec2::rotatedBy(float radians){
     cgMat2 R = cgMat2(cos(radians), -1*sin(radians), sin(radians), cos(radians));
     return R*(*this);
+}
+void cgVec2::rotateBy(float radians){
+    cgMat2 R = cgMat2(cos(radians), -1*sin(radians), sin(radians), cos(radians));
+    cgVec2 temp = R*(*this);
+    this->x = temp.x;
+    this->y = temp.y;
 }
 cgMat2::cgMat2(float r1c1, float r1c2,
                float r2c1, float r2c2){

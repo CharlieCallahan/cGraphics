@@ -16,6 +16,7 @@
 		381B65A625CF4D2E00B7FB07 /* cgQuad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659725CF4D2D00B7FB07 /* cgQuad.cpp */; };
 		381B65A725CF4D2E00B7FB07 /* cgVec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659C25CF4D2D00B7FB07 /* cgVec.cpp */; };
 		381B65A825CF4D2E00B7FB07 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 381B659E25CF4D2D00B7FB07 /* glad.c */; };
+		381B65AB25CF631900B7FB07 /* cgTiming.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B65A925CF631900B7FB07 /* cgTiming.cpp */; };
 		3843EF5C25CD0668004EAD53 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3843EF5A25CD0604004EAD53 /* libglfw.3.3.dylib */; };
 		3843EF5E25CD079D004EAD53 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3843EF5D25CD079D004EAD53 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,8 @@
 		381B659D25CF4D2D00B7FB07 /* cgVec.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cgVec.hpp; sourceTree = "<group>"; };
 		381B659E25CF4D2D00B7FB07 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
 		381B659F25CF4D2D00B7FB07 /* default.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = default.fs; sourceTree = "<group>"; };
+		381B65A925CF631900B7FB07 /* cgTiming.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cgTiming.cpp; sourceTree = "<group>"; };
+		381B65AA25CF631900B7FB07 /* cgTiming.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cgTiming.hpp; sourceTree = "<group>"; };
 		3843EF3E25CCF62E004EAD53 /* cGraphics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cGraphics; sourceTree = BUILT_PRODUCTS_DIR; };
 		3843EF5A25CD0604004EAD53 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../usr/local/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		3843EF5D25CD079D004EAD53 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -93,6 +96,8 @@
 				381B659325CF4D2D00B7FB07 /* cgLog.hpp */,
 				381B659425CF4D2D00B7FB07 /* cgVertexArray.cpp */,
 				381B659525CF4D2D00B7FB07 /* cgVertexArray.h */,
+				381B65A925CF631900B7FB07 /* cgTiming.cpp */,
+				381B65AA25CF631900B7FB07 /* cgTiming.hpp */,
 			);
 			path = Render_Level;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				381B65A225CF4D2E00B7FB07 /* cgLog.cpp in Sources */,
+				381B65AB25CF631900B7FB07 /* cgTiming.cpp in Sources */,
 				381B65A525CF4D2E00B7FB07 /* cgVertexArray.cpp in Sources */,
 				381B65A725CF4D2E00B7FB07 /* cgVec.cpp in Sources */,
 				381B65A125CF4D2E00B7FB07 /* main.cpp in Sources */,

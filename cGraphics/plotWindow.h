@@ -16,6 +16,7 @@ protected:
 private:
 	void initVAO();
 private:
+    float angle = 0;
     cgQuad* test;
 	Shader* shader;
 };

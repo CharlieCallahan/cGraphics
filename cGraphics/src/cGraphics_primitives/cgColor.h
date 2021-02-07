@@ -11,6 +11,7 @@
 
 struct cgColor{
     cgColor(float r, float g, float b){this->r = r; this->g = g; this->b = b;}
+    cgColor(const cgColor& color) {this->r = color.r; this->g = color.g; this->b = color.b;}
     float r;
     float g;
     float b;

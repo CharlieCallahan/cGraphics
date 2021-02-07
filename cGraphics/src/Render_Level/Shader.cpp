@@ -65,7 +65,6 @@ Shader::Shader(){
         "gl_Position = vec4(aPos, 1.0);\n"
     "vertexColor = vec4(aColor,1.0); \n"
     "}";
-    
     const char* fShaderCode = "#version 330 core\nout vec4 FragColor;\nin vec4 vertexColor;\nvoid main()\n{\nFragColor = vertexColor;\n}";
     // 2. compile shaders
     unsigned int vertex, fragment;

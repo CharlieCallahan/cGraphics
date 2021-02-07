@@ -15,12 +15,15 @@
 struct cgVec2{
     float x;
     float y;
+    cgVec2(){};
     cgVec2(float x,float y);
+    cgVec2(const cgVec2& vector); //Copy constructor
     cgVec2 operator+(const cgVec2& vector);
     cgVec2 operator-(const cgVec2& vector);
     float innerProd(const cgVec2& vector);
     cgVec2 normalized();
     cgVec2 rotatedBy(float radians);
+    void rotateBy(float radians);
 };
 
 struct cgMat2{

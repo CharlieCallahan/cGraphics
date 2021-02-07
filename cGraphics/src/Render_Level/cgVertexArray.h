@@ -17,6 +17,9 @@ public:
 		GLenum type,
 		GLsizei stridebytes,
 		int offsetbytes);
+    void refreshVertexArray(const void* vertexData,
+                            unsigned int vertexCount,
+                            GLenum drawMode);
 public:
 	unsigned int id;
 private:

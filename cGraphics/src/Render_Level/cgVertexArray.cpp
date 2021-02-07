@@ -14,6 +14,16 @@ cgVertexArray::cgVertexArray(const void* vertexData, unsigned int vertexCount, c
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 }
+void cgVertexArray::refreshVertexArray(const void* vertexData,
+                        unsigned int vertexCount,
+                        GLenum drawMode){
+    glBindVertexArray(0);
+    glBindVertexArray(id);
+    glBindBuffer(GL_ARRAY_BUFFER, vertexBuffObj);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(float)*vertexCount, vertexData, drawMode);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
+}
 
 cgVertexArray::~cgVertexArray()
 {
