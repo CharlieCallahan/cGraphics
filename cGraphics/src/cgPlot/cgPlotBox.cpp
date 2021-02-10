@@ -21,4 +21,6 @@ void cgPlotBox::draw(){
 }
 void cgPlotBox::addLine(float* xdata,float* ydata,int count, cgColor color){
     lines.push_back(new cgPlotLine(xdata ,ydata ,count, lineWidth , xlim, ylim, this->rect));
+    lines[lines.size()-1]->setColor(color);
+    //draw();
 }

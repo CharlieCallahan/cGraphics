@@ -1,11 +1,3 @@
-//
-//  cgPlotLine.cpp
-//  cGraphics
-//
-//  Created by Charles callahan on 2/9/21.
-//  Copyright © 2021 Charles callahan. All rights reserved.
-//
-
 #include "cgPlotLine.hpp"
 cgPlotLine::cgPlotLine(float* xdata, float* ydata, int count, float thickness,cgVec2 xlimits, cgVec2 ylimits, cgRect inRect): Drawable(inRect){
     //ylimits = min,max

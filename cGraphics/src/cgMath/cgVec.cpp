@@ -1,11 +1,3 @@
-//
-//  cgVec.cpp
-//  cGraphics
-//
-//  Created by Charles callahan on 2/6/21.
-//  Copyright © 2021 Charles callahan. All rights reserved.
-//
-
 #include "cgVec.hpp"
 cgVec2::cgVec2(float x,float y){
     this->x = x;

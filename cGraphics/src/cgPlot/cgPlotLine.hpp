@@ -1,14 +1,5 @@
-//
-//  cgPlotLine.hpp
-//  cGraphics
-//
-//  Created by Charles callahan on 2/9/21.
-//  Copyright © 2021 Charles callahan. All rights reserved.
-//
-
 #ifndef cgPlotLine_hpp
 #define cgPlotLine_hpp
-
 #include <stdio.h>
 #include "Drawable.h"
 #include "cgQuad.h"

@@ -1,17 +1,7 @@
-//
-//  cgVec.hpp
-//  cGraphics
-//
-//  Created by Charles callahan on 2/6/21.
-//  Copyright © 2021 Charles callahan. All rights reserved.
-//
-
 #ifndef cgVec_hpp
 #define cgVec_hpp
-
 #include <stdio.h>
 #include "math.h"
-
 struct cgVec2{
     float x;
     float y;

@@ -7,17 +7,21 @@
 class plotWindow : public cgWindowBase
 {
 public:
-	plotWindow();
-    ~plotWindow(){delete test;delete shader;};
+	plotWindow(cgVec2 xlim, cgVec2 ylim);
+    ~plotWindow(){delete plotBox;delete shader;};
+    void addLine(float* xdata, float*ydata, int count);
 protected:
 	// Inherited via cgWindowBase
 	virtual void draw() override;
 	virtual void processInput() override;
 private:
-	void initVAO();
+    cgColor getNextColor();
 private:
-    cgPlotBox* test;
+    cgPlotBox* plotBox;
+    cgVec2 xlim;
+    cgVec2 ylim;
 	Shader* shader; // need to set shader before rendering
-    
+    cgColor colors[3] = {{1,0,0},{0,1,0},{0,0,1}};
+    int currentColor = 0;
 };
 
