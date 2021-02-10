@@ -17,6 +17,8 @@
 		381B65A725CF4D2E00B7FB07 /* cgVec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659C25CF4D2D00B7FB07 /* cgVec.cpp */; };
 		381B65A825CF4D2E00B7FB07 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 381B659E25CF4D2D00B7FB07 /* glad.c */; };
 		381B65AB25CF631900B7FB07 /* cgTiming.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B65A925CF631900B7FB07 /* cgTiming.cpp */; };
+		381B65B125D3321400B7FB07 /* cgPlotBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B65AF25D3321400B7FB07 /* cgPlotBox.cpp */; };
+		381B65B425D333CC00B7FB07 /* cgPlotLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B65B225D333CC00B7FB07 /* cgPlotLine.cpp */; };
 		3843EF5C25CD0668004EAD53 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3843EF5A25CD0604004EAD53 /* libglfw.3.3.dylib */; };
 		3843EF5E25CD079D004EAD53 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3843EF5D25CD079D004EAD53 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +58,13 @@
 		381B659F25CF4D2D00B7FB07 /* default.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = default.fs; sourceTree = "<group>"; };
 		381B65A925CF631900B7FB07 /* cgTiming.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cgTiming.cpp; sourceTree = "<group>"; };
 		381B65AA25CF631900B7FB07 /* cgTiming.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cgTiming.hpp; sourceTree = "<group>"; };
+		381B65AC25D0687000B7FB07 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		381B65AE25D3319100B7FB07 /* Drawable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Drawable.h; sourceTree = "<group>"; };
+		381B65AF25D3321400B7FB07 /* cgPlotBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cgPlotBox.cpp; sourceTree = "<group>"; };
+		381B65B025D3321400B7FB07 /* cgPlotBox.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cgPlotBox.hpp; sourceTree = "<group>"; };
+		381B65B225D333CC00B7FB07 /* cgPlotLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cgPlotLine.cpp; sourceTree = "<group>"; };
+		381B65B325D333CC00B7FB07 /* cgPlotLine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cgPlotLine.hpp; sourceTree = "<group>"; };
+		381B65B625D3349C00B7FB07 /* cgRect.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cgRect.hpp; sourceTree = "<group>"; };
 		3843EF3E25CCF62E004EAD53 /* cGraphics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cGraphics; sourceTree = BUILT_PRODUCTS_DIR; };
 		3843EF5A25CD0604004EAD53 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../usr/local/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		3843EF5D25CD079D004EAD53 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -77,6 +86,7 @@
 		381B658C25CF4D2D00B7FB07 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				381B65AD25D3303E00B7FB07 /* cgPlot */,
 				381B658D25CF4D2D00B7FB07 /* Render_Level */,
 				381B659625CF4D2D00B7FB07 /* cGraphics_primitives */,
 				381B659A25CF4D2D00B7FB07 /* cGraphics.h */,
@@ -90,9 +100,9 @@
 			children = (
 				381B658E25CF4D2D00B7FB07 /* cgLog.cpp */,
 				381B658F25CF4D2D00B7FB07 /* cgWindowBase.h */,
+				381B659225CF4D2D00B7FB07 /* cgWindowBase.cpp */,
 				381B659025CF4D2D00B7FB07 /* Shader.h */,
 				381B659125CF4D2D00B7FB07 /* Shader.cpp */,
-				381B659225CF4D2D00B7FB07 /* cgWindowBase.cpp */,
 				381B659325CF4D2D00B7FB07 /* cgLog.hpp */,
 				381B659425CF4D2D00B7FB07 /* cgVertexArray.cpp */,
 				381B659525CF4D2D00B7FB07 /* cgVertexArray.h */,
@@ -108,6 +118,8 @@
 				381B659725CF4D2D00B7FB07 /* cgQuad.cpp */,
 				381B659825CF4D2D00B7FB07 /* cgQuad.h */,
 				381B659925CF4D2D00B7FB07 /* cgColor.h */,
+				381B65AE25D3319100B7FB07 /* Drawable.h */,
+				381B65B625D3349C00B7FB07 /* cgRect.hpp */,
 			);
 			path = cGraphics_primitives;
 			sourceTree = "<group>";
@@ -119,6 +131,17 @@
 				381B659D25CF4D2D00B7FB07 /* cgVec.hpp */,
 			);
 			path = cgMath;
+			sourceTree = "<group>";
+		};
+		381B65AD25D3303E00B7FB07 /* cgPlot */ = {
+			isa = PBXGroup;
+			children = (
+				381B65AF25D3321400B7FB07 /* cgPlotBox.cpp */,
+				381B65B025D3321400B7FB07 /* cgPlotBox.hpp */,
+				381B65B225D333CC00B7FB07 /* cgPlotLine.cpp */,
+				381B65B325D333CC00B7FB07 /* cgPlotLine.hpp */,
+			);
+			path = cgPlot;
 			sourceTree = "<group>";
 		};
 		3843EF3525CCF62E004EAD53 = {
@@ -141,6 +164,7 @@
 		3843EF4025CCF62E004EAD53 /* cGraphics */ = {
 			isa = PBXGroup;
 			children = (
+				381B65AC25D0687000B7FB07 /* stb_image.h */,
 				381B659F25CF4D2D00B7FB07 /* default.fs */,
 				381B658925CF4D2D00B7FB07 /* default.vs */,
 				381B659E25CF4D2D00B7FB07 /* glad.c */,
@@ -221,8 +245,10 @@
 				381B65AB25CF631900B7FB07 /* cgTiming.cpp in Sources */,
 				381B65A525CF4D2E00B7FB07 /* cgVertexArray.cpp in Sources */,
 				381B65A725CF4D2E00B7FB07 /* cgVec.cpp in Sources */,
+				381B65B425D333CC00B7FB07 /* cgPlotLine.cpp in Sources */,
 				381B65A125CF4D2E00B7FB07 /* main.cpp in Sources */,
 				381B65A325CF4D2E00B7FB07 /* Shader.cpp in Sources */,
+				381B65B125D3321400B7FB07 /* cgPlotBox.cpp in Sources */,
 				381B65A425CF4D2E00B7FB07 /* cgWindowBase.cpp in Sources */,
 				381B65A025CF4D2E00B7FB07 /* plotWindow.cpp in Sources */,
 				381B65A625CF4D2E00B7FB07 /* cgQuad.cpp in Sources */,

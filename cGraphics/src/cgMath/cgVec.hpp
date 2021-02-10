@@ -20,6 +20,7 @@ struct cgVec2{
     cgVec2(const cgVec2& vector); //Copy constructor
     cgVec2 operator+(const cgVec2& vector);
     cgVec2 operator-(const cgVec2& vector);
+    cgVec2 operator*(const float& scalar);
     float innerProd(const cgVec2& vector);
     cgVec2 normalized();
     cgVec2 rotatedBy(float radians);

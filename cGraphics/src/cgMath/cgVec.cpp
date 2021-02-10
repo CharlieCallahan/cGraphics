@@ -21,6 +21,9 @@ cgVec2 cgVec2::operator+(const cgVec2& vector){
 cgVec2 cgVec2::operator-(const cgVec2& vector){
     return cgVec2(this->x-vector.x, this->y-vector.y);
 }
+cgVec2 cgVec2::operator*(const float& scalar){
+    return cgVec2(this->x*scalar,this->y*scalar);
+}
 float cgVec2::innerProd(const cgVec2& vector){
     return this->x+vector.x + this->y*vector.y;
 }

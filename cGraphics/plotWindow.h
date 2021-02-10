@@ -1,7 +1,7 @@
 #pragma once
 #include "cgWindowBase.h"
+#include "cgPlotBox.hpp"
 #include "Shader.h"
-#include "cgQuad.h"
 #include "cgLog.hpp"
 
 class plotWindow : public cgWindowBase
@@ -16,8 +16,8 @@ protected:
 private:
 	void initVAO();
 private:
-    float angle = 0;
-    cgQuad* test;
-	Shader* shader;
+    cgPlotBox* test;
+	Shader* shader; // need to set shader before rendering
+    
 };
 

@@ -1,10 +1,11 @@
 #pragma once
 #include "cGraphics.h"
 #include <iostream>
+
 class cgWindowBase
 {
 public:
-	cgWindowBase(int width,int height);
+    cgWindowBase(int width,int height, const char* name);
 	~cgWindowBase();
 	//Runs loop until window is closed
 	void run();

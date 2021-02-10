@@ -8,16 +8,18 @@
 
 #pragma once
 
-#include "cGraphics.h"
+//#include "cGraphics.h"
 #include "cgVec.hpp"
+#include "cgRect.hpp"
 #include "cgColor.h"
 #include "cgVertexArray.h"
+#include <iostream>
 class cgQuad{
 public:
-        //topleft, topright, bottomleft, bottomright
-    cgQuad(float* verticies, cgColor color);
-    cgQuad(cgVec2* vertices,cgColor color);
-    //cgQuad(cgVec2 start, cgVec2 end, float width);
+    //cgQuad();
+    cgQuad(cgVec2* vertices,cgColor color);//topleft, topright, bottomleft, bottomright
+    cgQuad(cgRect rect, cgColor color);
+    cgQuad(cgVec2 start, cgVec2 end, float width,cgColor color); //Makes a line segment
     ~cgQuad() {delete vao;delete[] vertArray;delete [] vertBuffer;delete [] indices;};
     void refreshVertBuffer();
     void draw();

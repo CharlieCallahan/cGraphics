@@ -2,7 +2,7 @@
 void defaultFrameBuffCallback(GLFWwindow* window, int width, int height) {
 	glViewport(0, 0, width, height);
 }
-cgWindowBase::cgWindowBase(int width, int height) {
+cgWindowBase::cgWindowBase(int width, int height, const char* name) {
 	glfwInit();
 #ifdef __APPLE__
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
@@ -16,7 +16,7 @@ cgWindowBase::cgWindowBase(int width, int height) {
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 #endif
     
-	window = glfwCreateWindow(width, height, "LearnOpenGL", NULL, NULL);
+	window = glfwCreateWindow(width, height, name, NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
