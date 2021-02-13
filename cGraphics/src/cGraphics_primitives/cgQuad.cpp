@@ -94,7 +94,7 @@ cgQuad::cgQuad(cgVec2 start, cgVec2 end, float width, cgColor color){
     vao->setVertexAttrPointer(1, 3, GL_FLOAT, 6 * sizeof(float), 3*sizeof(float));
 }
 void cgQuad::draw(){
-    vao->bind();
+     vao->bind();
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 }
 void cgQuad::rotateBy(float radians){

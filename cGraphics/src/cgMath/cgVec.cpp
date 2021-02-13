@@ -46,3 +46,47 @@ float cgMat2::at(int row, int col){
 cgVec2 cgMat2::operator*(const cgVec2& vector){
     return cgVec2(data[0]*vector.x+data[1]*vector.y, data[2]*vector.x+data[3]*vector.y);
 }
+
+cg2DFloatArray::cg2DFloatArray(int numRows, int numCols){
+    data = new float*[numRows];
+    for (int i = 0; i < numRows; i++){
+        data[i] = new float[numCols];
+    }
+    this->numCols = numCols;
+    this->numRows = numRows;
+}
+cg2DFloatArray::~cg2DFloatArray(){
+    for(int i = 0; i < numRows;i++){
+        delete[] data[i];
+    }
+    delete [] data;
+}
+float cg2DFloatArray::at(int row, int col){
+    return data[row][col];
+}
+void cg2DFloatArray::set(int row, int col, float to){
+    this->data[row][col] = to;
+}
+float cg2DFloatArray::max(){
+    float max = data[0][0];
+    for(int i = 0; i < numRows; i++){
+        for(int j = 0; j < numCols; j++){
+            if (data[i][j] > max){
+                max = data[i][j];
+            }
+        }
+    }
+    return max;
+}
+float cg2DFloatArray::min(){
+    float min = data[0][0];
+    for(int i = 0; i < numRows; i++){
+        for(int j = 0; j < numCols; j++){
+            if (data[i][j] < min){
+                min = data[i][j];
+            }
+        }
+    }
+    return min;
+}
+

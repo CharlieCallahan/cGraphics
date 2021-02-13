@@ -1,23 +1,16 @@
-#include "cGraphics.h"
-#include "plotWindow.h"
-//#include "cgQuad.h"
-//#include "cgVec.hpp"
-//#define STB_IMAGE_IMPLEMENTATION
-//#include "stb_image.h"
+#include "cgHeightMap.hpp"
 
-//void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 int main()
 {
-    plotWindow pl = plotWindow(cgVec2(0,10), cgVec2(-10,10));
-    float xdata[100];
-    float ydata[100];
-    float ydata1[100];
-    for (int i = 0; i < 100; i++){
-        xdata[i] = 2*M_PI*i/100;
-        ydata[i] = sin(xdata[i]);
-        ydata1[i] = cos(xdata[i]);
+    cg2DFloatArray dat = cg2DFloatArray(100,100);
+    for(int i = 0; i < 100; i++){
+        for(int j = 0; j < 100; j++){
+            dat.set(i, j, sin(float(i)/100.0*20*M_PI) + sin(float(j)/100.0*10*M_PI));
+            //dat.set(i, j, (float(i)/100.0 + float(j)/100.0)/2);
+        }
     }
-    pl.addLine(xdata, ydata, 100);
-    pl.addLine(xdata, ydata1, 100);
-    pl.run();
+    cgHeightMapWindow* wind = new cgHeightMapWindow(dat);
+    
+    wind->run();
 }
+

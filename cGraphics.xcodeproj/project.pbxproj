@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3811C09725D859A40033D474 /* cgHeightMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3811C09525D859A40033D474 /* cgHeightMap.cpp */; };
 		381B65A025CF4D2E00B7FB07 /* plotWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B658825CF4D2D00B7FB07 /* plotWindow.cpp */; };
 		381B65A125CF4D2E00B7FB07 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B658A25CF4D2D00B7FB07 /* main.cpp */; };
 		381B65A225CF4D2E00B7FB07 /* cgLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B658E25CF4D2D00B7FB07 /* cgLog.cpp */; };
@@ -21,6 +22,34 @@
 		381B65B425D333CC00B7FB07 /* cgPlotLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B65B225D333CC00B7FB07 /* cgPlotLine.cpp */; };
 		3843EF5C25CD0668004EAD53 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3843EF5A25CD0604004EAD53 /* libglfw.3.3.dylib */; };
 		3843EF5E25CD079D004EAD53 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3843EF5D25CD079D004EAD53 /* OpenGL.framework */; };
+		38B8696C25D3A80C00024E0D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3843EF5D25CD079D004EAD53 /* OpenGL.framework */; };
+		38B8696D25D3A86000024E0D /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3843EF5A25CD0604004EAD53 /* libglfw.3.3.dylib */; };
+		38B8696E25D3A88600024E0D /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 381B659E25CF4D2D00B7FB07 /* glad.c */; };
+		38B8696F25D3A88600024E0D /* plotWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B658825CF4D2D00B7FB07 /* plotWindow.cpp */; };
+		38B8697025D3A88600024E0D /* plotWindow.h in Sources */ = {isa = PBXBuildFile; fileRef = 381B658B25CF4D2D00B7FB07 /* plotWindow.h */; };
+		38B8697125D3A88600024E0D /* cgPlotBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B65AF25D3321400B7FB07 /* cgPlotBox.cpp */; };
+		38B8697225D3A88600024E0D /* cgPlotBox.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B65B025D3321400B7FB07 /* cgPlotBox.hpp */; };
+		38B8697325D3A88600024E0D /* cgPlotLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B65B225D333CC00B7FB07 /* cgPlotLine.cpp */; };
+		38B8697425D3A88600024E0D /* cgPlotLine.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B65B325D333CC00B7FB07 /* cgPlotLine.hpp */; };
+		38B8697525D3A88600024E0D /* cgLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B658E25CF4D2D00B7FB07 /* cgLog.cpp */; };
+		38B8697625D3A88600024E0D /* cgWindowBase.h in Sources */ = {isa = PBXBuildFile; fileRef = 381B658F25CF4D2D00B7FB07 /* cgWindowBase.h */; };
+		38B8697725D3A88600024E0D /* cgWindowBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659225CF4D2D00B7FB07 /* cgWindowBase.cpp */; };
+		38B8697825D3A88600024E0D /* Shader.h in Sources */ = {isa = PBXBuildFile; fileRef = 381B659025CF4D2D00B7FB07 /* Shader.h */; };
+		38B8697925D3A88600024E0D /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659125CF4D2D00B7FB07 /* Shader.cpp */; };
+		38B8697A25D3A88600024E0D /* cgLog.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659325CF4D2D00B7FB07 /* cgLog.hpp */; };
+		38B8697B25D3A88600024E0D /* cgVertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659425CF4D2D00B7FB07 /* cgVertexArray.cpp */; };
+		38B8697C25D3A88600024E0D /* cgVertexArray.h in Sources */ = {isa = PBXBuildFile; fileRef = 381B659525CF4D2D00B7FB07 /* cgVertexArray.h */; };
+		38B8697D25D3A88600024E0D /* cgTiming.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B65A925CF631900B7FB07 /* cgTiming.cpp */; };
+		38B8697E25D3A88600024E0D /* cgTiming.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B65AA25CF631900B7FB07 /* cgTiming.hpp */; };
+		38B8697F25D3A88600024E0D /* cgQuad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659725CF4D2D00B7FB07 /* cgQuad.cpp */; };
+		38B8698025D3A88600024E0D /* cgQuad.h in Sources */ = {isa = PBXBuildFile; fileRef = 381B659825CF4D2D00B7FB07 /* cgQuad.h */; };
+		38B8698125D3A88600024E0D /* cgColor.h in Sources */ = {isa = PBXBuildFile; fileRef = 381B659925CF4D2D00B7FB07 /* cgColor.h */; };
+		38B8698225D3A88600024E0D /* Drawable.h in Sources */ = {isa = PBXBuildFile; fileRef = 381B65AE25D3319100B7FB07 /* Drawable.h */; };
+		38B8698325D3A88600024E0D /* cgRect.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B65B625D3349C00B7FB07 /* cgRect.hpp */; };
+		38B8698425D3A88600024E0D /* cGraphics.h in Sources */ = {isa = PBXBuildFile; fileRef = 381B659A25CF4D2D00B7FB07 /* cGraphics.h */; };
+		38B8698525D3A88600024E0D /* cgVec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659C25CF4D2D00B7FB07 /* cgVec.cpp */; };
+		38B8698625D3A88600024E0D /* cgVec.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659D25CF4D2D00B7FB07 /* cgVec.hpp */; };
+		38B8698725D3A89100024E0D /* plotWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 381B658B25CF4D2D00B7FB07 /* plotWindow.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +65,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3811C09525D859A40033D474 /* cgHeightMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cgHeightMap.cpp; sourceTree = "<group>"; };
+		3811C09625D859A40033D474 /* cgHeightMap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cgHeightMap.hpp; sourceTree = "<group>"; };
 		381B658825CF4D2D00B7FB07 /* plotWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plotWindow.cpp; sourceTree = "<group>"; };
 		381B658925CF4D2D00B7FB07 /* default.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = default.vs; sourceTree = "<group>"; };
 		381B658A25CF4D2D00B7FB07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -68,6 +99,7 @@
 		3843EF3E25CCF62E004EAD53 /* cGraphics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cGraphics; sourceTree = BUILT_PRODUCTS_DIR; };
 		3843EF5A25CD0604004EAD53 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../usr/local/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		3843EF5D25CD079D004EAD53 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		38B8696825D3A78100024E0D /* libcgPlot.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcgPlot.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +109,15 @@
 			files = (
 				3843EF5E25CD079D004EAD53 /* OpenGL.framework in Frameworks */,
 				3843EF5C25CD0668004EAD53 /* libglfw.3.3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38B8696625D3A78100024E0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38B8696D25D3A86000024E0D /* libglfw.3.3.dylib in Frameworks */,
+				38B8696C25D3A80C00024E0D /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +181,8 @@
 				381B65B025D3321400B7FB07 /* cgPlotBox.hpp */,
 				381B65B225D333CC00B7FB07 /* cgPlotLine.cpp */,
 				381B65B325D333CC00B7FB07 /* cgPlotLine.hpp */,
+				3811C09525D859A40033D474 /* cgHeightMap.cpp */,
+				3811C09625D859A40033D474 /* cgHeightMap.hpp */,
 			);
 			path = cgPlot;
 			sourceTree = "<group>";
@@ -157,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				3843EF3E25CCF62E004EAD53 /* cGraphics */,
+				38B8696825D3A78100024E0D /* libcgPlot.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,6 +231,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		38B8696425D3A78100024E0D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38B8698725D3A89100024E0D /* plotWindow.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		3843EF3D25CCF62E004EAD53 /* cGraphics */ = {
 			isa = PBXNativeTarget;
@@ -205,6 +260,23 @@
 			productReference = 3843EF3E25CCF62E004EAD53 /* cGraphics */;
 			productType = "com.apple.product-type.tool";
 		};
+		38B8696725D3A78100024E0D /* cgPlot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38B8696925D3A78100024E0D /* Build configuration list for PBXNativeTarget "cgPlot" */;
+			buildPhases = (
+				38B8696425D3A78100024E0D /* Headers */,
+				38B8696525D3A78100024E0D /* Sources */,
+				38B8696625D3A78100024E0D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cgPlot;
+			productName = cgPlot;
+			productReference = 38B8696825D3A78100024E0D /* libcgPlot.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -215,6 +287,9 @@
 				ORGANIZATIONNAME = "Charles callahan";
 				TargetAttributes = {
 					3843EF3D25CCF62E004EAD53 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					38B8696725D3A78100024E0D = {
 						CreatedOnToolsVersion = 10.3;
 					};
 				};
@@ -232,6 +307,7 @@
 			projectRoot = "";
 			targets = (
 				3843EF3D25CCF62E004EAD53 /* cGraphics */,
+				38B8696725D3A78100024E0D /* cgPlot */,
 			);
 		};
 /* End PBXProject section */
@@ -243,6 +319,7 @@
 			files = (
 				381B65A225CF4D2E00B7FB07 /* cgLog.cpp in Sources */,
 				381B65AB25CF631900B7FB07 /* cgTiming.cpp in Sources */,
+				3811C09725D859A40033D474 /* cgHeightMap.cpp in Sources */,
 				381B65A525CF4D2E00B7FB07 /* cgVertexArray.cpp in Sources */,
 				381B65A725CF4D2E00B7FB07 /* cgVec.cpp in Sources */,
 				381B65B425D333CC00B7FB07 /* cgPlotLine.cpp in Sources */,
@@ -253,6 +330,38 @@
 				381B65A025CF4D2E00B7FB07 /* plotWindow.cpp in Sources */,
 				381B65A625CF4D2E00B7FB07 /* cgQuad.cpp in Sources */,
 				381B65A825CF4D2E00B7FB07 /* glad.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38B8696525D3A78100024E0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38B8696E25D3A88600024E0D /* glad.c in Sources */,
+				38B8696F25D3A88600024E0D /* plotWindow.cpp in Sources */,
+				38B8697025D3A88600024E0D /* plotWindow.h in Sources */,
+				38B8697125D3A88600024E0D /* cgPlotBox.cpp in Sources */,
+				38B8697225D3A88600024E0D /* cgPlotBox.hpp in Sources */,
+				38B8697325D3A88600024E0D /* cgPlotLine.cpp in Sources */,
+				38B8697425D3A88600024E0D /* cgPlotLine.hpp in Sources */,
+				38B8697525D3A88600024E0D /* cgLog.cpp in Sources */,
+				38B8697625D3A88600024E0D /* cgWindowBase.h in Sources */,
+				38B8697725D3A88600024E0D /* cgWindowBase.cpp in Sources */,
+				38B8697825D3A88600024E0D /* Shader.h in Sources */,
+				38B8697925D3A88600024E0D /* Shader.cpp in Sources */,
+				38B8697A25D3A88600024E0D /* cgLog.hpp in Sources */,
+				38B8697B25D3A88600024E0D /* cgVertexArray.cpp in Sources */,
+				38B8697C25D3A88600024E0D /* cgVertexArray.h in Sources */,
+				38B8697D25D3A88600024E0D /* cgTiming.cpp in Sources */,
+				38B8697E25D3A88600024E0D /* cgTiming.hpp in Sources */,
+				38B8697F25D3A88600024E0D /* cgQuad.cpp in Sources */,
+				38B8698025D3A88600024E0D /* cgQuad.h in Sources */,
+				38B8698125D3A88600024E0D /* cgColor.h in Sources */,
+				38B8698225D3A88600024E0D /* Drawable.h in Sources */,
+				38B8698325D3A88600024E0D /* cgRect.hpp in Sources */,
+				38B8698425D3A88600024E0D /* cGraphics.h in Sources */,
+				38B8698525D3A88600024E0D /* cgVec.cpp in Sources */,
+				38B8698625D3A88600024E0D /* cgVec.hpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +511,34 @@
 			};
 			name = Release;
 		};
+		38B8696A25D3A78100024E0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		38B8696B25D3A78100024E0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -419,6 +556,15 @@
 			buildConfigurations = (
 				3843EF4625CCF62E004EAD53 /* Debug */,
 				3843EF4725CCF62E004EAD53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38B8696925D3A78100024E0D /* Build configuration list for PBXNativeTarget "cgPlot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38B8696A25D3A78100024E0D /* Debug */,
+				38B8696B25D3A78100024E0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
