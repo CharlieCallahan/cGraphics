@@ -89,4 +89,47 @@ float cg2DFloatArray::min(){
     }
     return min;
 }
+cgMat4::cgMat4(float xx,float yx,float zx,float wx, float xy,float yy,float zy,float wy, float xz,float yz,float zz,float wz, float xw,float yw,float zw, float ww){
+    x = cgVec4(xx,xy,xz,xw);
+    y = cgVec4(yx,yy,yz,yw);
+    z = cgVec4(zx,zy,zz,zw);
+    w = cgVec4(wx,wy,wz,ww);
+}
+
+cgMat4::cgMat4(float xx,float xy,float xz,float yx,float yy,float yz,float zx,float zy,float zz,float wx,float wy,float wz){
+    x = cgVec4(xx,xy,xz,0);
+    y = cgVec4(yx,yy,yz,0);
+    z = cgVec4(zx,zy,zz,0);
+    w = cgVec4(wx,wy,wz,1);
+    }
+cgMat4* translation(float Tx, float Ty, float Tz){
+    return new cgMat4(1, 0, 0, Tx,
+                      0, 1, 0, Ty,
+                      0, 0, 1, Tz,
+                      0, 0, 0, 1);
+}
+cgMat4* scaling(float Sx, float Sy, float Sz){
+    return new cgMat4(Sx, 0, 0, 0,
+                      0, Sy, 0, 0,
+                      0, 0, Sz, 0,
+                      0, 0, 0, 1);
+}
+cgMat4* rotation(cgVec3 axis, float theta){
+    return new cgMat4(cos(theta)+axis.x*axis.x*(1-cos(theta)), axis.x*axis.y*(1-cos(theta))-axis.z*sin(theta), axis.x*axis.z*(1-cos(theta))+axis.y*sin(theta), 0,
+                     axis.y*axis.x*(1-cos(theta))+axis.z*sin(theta), cos(theta)+axis.y*axis.y*(1-cos(theta)), axis.y*axis.z*(1-cos(theta))-axis.x*sin(theta), 0,
+                     axis.z*axis.x*(1-cos(theta))-axis.y*sin(theta), axis.z*axis.y*(1-cos(theta))+axis.x*sin(theta), cos(theta)+axis.z*axis.z*(1-cos(theta)), 0,
+                     0, 0, 0, 1);
+}
+cgMat4* projectionMatrix(float n, float r, float t, float f){
+    return new cgMat4(n/r, 0, 0, 0,
+                      0, n/t, 0, 0,
+                      0, 0, -(f+n)/(f-n), -2*f*n/(f-n),
+                      0, 0, -1, 0);
+}
+cgMat4* orthoProjection(float n, float r, float t, float f){
+    return new cgMat4(1/r, 0, 0, 0,
+                      0, 1/t, 0, 0,
+                      0, 0, -2/(f-n), -(f+n)/(f-n),
+                      0, 0, 0, 1);
+}
 

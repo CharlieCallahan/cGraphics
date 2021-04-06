@@ -38,7 +38,7 @@ cgWindowBase::~cgWindowBase() {
 void cgWindowBase::run() {
 	while (!glfwWindowShouldClose(window))
 	{
+        processInput();
 		draw();
-		processInput();
 	}
 }

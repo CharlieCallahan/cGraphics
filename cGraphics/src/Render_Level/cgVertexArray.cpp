@@ -5,6 +5,7 @@ cgVertexArray::cgVertexArray(const void* vertexData, unsigned int vertexCount, c
     glGenVertexArrays(1, &id);
     glGenBuffers(1, &vertexBuffObj);
     glGenBuffers(1, &elementBuffObj);
+    containsElementBuff = true;
     glBindVertexArray(id);
     glBindBuffer(GL_ARRAY_BUFFER, vertexBuffObj);
     glBufferData(GL_ARRAY_BUFFER, sizeof(float)*vertexCount, vertexData, drawMode);
@@ -12,6 +13,17 @@ cgVertexArray::cgVertexArray(const void* vertexData, unsigned int vertexCount, c
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned int)*indexCount, indexData, drawMode);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
+}
+cgVertexArray::cgVertexArray(const void* vertexData,
+              unsigned int vertexCount,
+              GLenum drawMode){
+    glGenVertexArrays(1, &id);
+    glGenBuffers(1, &vertexBuffObj);
+    glBindVertexArray(id);
+    glBindBuffer(GL_ARRAY_BUFFER, vertexBuffObj);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(float)*vertexCount, vertexData, drawMode);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 }
 void cgVertexArray::refreshVertexArray(const void* vertexData,
@@ -29,14 +41,18 @@ cgVertexArray::~cgVertexArray()
 {
     glDeleteVertexArrays(1, &id);
     glDeleteBuffers(1, &vertexBuffObj);
-    glDeleteBuffers(1, &elementBuffObj);
+    if (containsElementBuff){
+        glDeleteBuffers(1, &elementBuffObj);
+    }
 }
 
 void cgVertexArray::bind()
 {
     glBindVertexArray(id);
     glBindBuffer(GL_ARRAY_BUFFER, vertexBuffObj);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementBuffObj);
+    if (containsElementBuff){
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementBuffObj);
+    }
 }
 
 void cgVertexArray::setVertexAttrPointer(GLuint index, GLint count, GLenum type, GLsizei stridebytes, int offsetbytes)

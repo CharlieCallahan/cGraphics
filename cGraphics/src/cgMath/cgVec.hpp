@@ -38,4 +38,33 @@ public:
 private:
     float**data;
 };
+struct cgVec3{
+    float x;
+    float y;
+    float z;
+    cgVec3(){this->x = 0;this->y = 0;this->z = 0;};
+    cgVec3(float x,float y, float z){this->x = x;this->y = y;this->z = z;};
+    cgVec3(const cgVec3& vec1){x = vec1.x;y = vec1.y;z = vec1.z;}
+};
+struct cgVec4{
+    float x;
+    float y;
+    float z;
+    float w;
+    cgVec4(float x,float y, float z,float w){this->x = x;this->y = y;this->z = z;this->w = w;};
+    cgVec4(){this->x = 0;this->y = 0;this->z = 0;this->w = 0;}
+};
+struct cgMat4{
+    cgVec4 x;
+    cgVec4 y;
+    cgVec4 z;
+    cgVec4 w;
+    cgMat4(float xx,float xy,float xz,float xw, float yx,float yy,float yz,float yw, float zx,float zy,float zz,float zw, float wx,float wy,float wz, float ww);
+    cgMat4(float xx,float xy,float xz,float yx,float yy,float yz,float zx,float zy,float zz,float wx,float wy,float wz);
+};
+cgMat4* translation(float Tx, float Ty, float Tz);
+cgMat4* scaling(float Sx, float Sy, float Sz);
+cgMat4* rotation(cgVec3 axis, float theta);
+cgMat4* projectionMatrix(float n, float r, float t, float f);
+cgMat4* orthoProjection(float n, float r, float t, float f);
 #endif /* cgVec_hpp */

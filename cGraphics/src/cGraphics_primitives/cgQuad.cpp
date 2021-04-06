@@ -70,9 +70,7 @@ cgQuad::cgQuad(cgRect rect, cgColor color){
     vao->setVertexAttrPointer(0, 3, GL_FLOAT, 6 * sizeof(float), 0);
     vao->setVertexAttrPointer(1, 3, GL_FLOAT, 6 * sizeof(float), 3*sizeof(float));
 }
-
 cgQuad::cgQuad(cgVec2 start, cgVec2 end, float width, cgColor color){
-    
     cgVec2 disp = (end-start).normalized().rotatedBy(M_PI/2);
     cgVec2 cornerTopStart = start+disp*width;
     cgVec2 cornerTopEnd = end+disp*width;
