@@ -5,7 +5,6 @@
 
 int main()
 {
-
     TestWindow* tw = new TestWindow();
     tw->run();
 }

@@ -35,6 +35,12 @@
 		388FB09E261ACC27003C87F8 /* TestWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388FB09B261ACC27003C87F8 /* TestWindow.cpp */; };
 		388FB09F261ACC27003C87F8 /* TestWindow.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 388FB09C261ACC27003C87F8 /* TestWindow.hpp */; };
 		388FB240261CE85D003C87F8 /* Renderable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 388FB23D261CE85D003C87F8 /* Renderable.hpp */; };
+		388FB243261D1B51003C87F8 /* Voxel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388FB241261D1B51003C87F8 /* Voxel.cpp */; };
+		388FB244261D1B51003C87F8 /* Voxel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388FB241261D1B51003C87F8 /* Voxel.cpp */; };
+		388FB245261D1B51003C87F8 /* Voxel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 388FB242261D1B51003C87F8 /* Voxel.hpp */; };
+		388FB248261D378C003C87F8 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388FB246261D378C003C87F8 /* Camera.cpp */; };
+		388FB249261D378C003C87F8 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388FB246261D378C003C87F8 /* Camera.cpp */; };
+		388FB24A261D378C003C87F8 /* Camera.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 388FB247261D378C003C87F8 /* Camera.hpp */; };
 		38B8696C25D3A80C00024E0D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3843EF5D25CD079D004EAD53 /* OpenGL.framework */; };
 		38B8696D25D3A86000024E0D /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3843EF5A25CD0604004EAD53 /* libglfw.3.3.dylib */; };
 		38B8696E25D3A88600024E0D /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 381B659E25CF4D2D00B7FB07 /* glad.c */; };
@@ -120,6 +126,10 @@
 		388FB09C261ACC27003C87F8 /* TestWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestWindow.hpp; sourceTree = "<group>"; };
 		388FB23B261BF168003C87F8 /* meshShader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = meshShader.vs; sourceTree = "<group>"; };
 		388FB23D261CE85D003C87F8 /* Renderable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Renderable.hpp; sourceTree = "<group>"; };
+		388FB241261D1B51003C87F8 /* Voxel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Voxel.cpp; sourceTree = "<group>"; };
+		388FB242261D1B51003C87F8 /* Voxel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Voxel.hpp; sourceTree = "<group>"; };
+		388FB246261D378C003C87F8 /* Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		388FB247261D378C003C87F8 /* Camera.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
 		38B8696825D3A78100024E0D /* libcgPlot.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcgPlot.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -175,6 +185,8 @@
 				384BEB4B25E2225F00E128B8 /* Mesh.cpp */,
 				384BEB4C25E2225F00E128B8 /* Mesh.hpp */,
 				388FB23D261CE85D003C87F8 /* Renderable.hpp */,
+				388FB246261D378C003C87F8 /* Camera.cpp */,
+				388FB247261D378C003C87F8 /* Camera.hpp */,
 			);
 			path = Render_Level;
 			sourceTree = "<group>";
@@ -187,6 +199,8 @@
 				381B659925CF4D2D00B7FB07 /* cgColor.h */,
 				381B65AE25D3319100B7FB07 /* Drawable.h */,
 				381B65B625D3349C00B7FB07 /* cgRect.hpp */,
+				388FB241261D1B51003C87F8 /* Voxel.cpp */,
+				388FB242261D1B51003C87F8 /* Voxel.hpp */,
 			);
 			path = cGraphics_primitives;
 			sourceTree = "<group>";
@@ -266,8 +280,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				388FB09F261ACC27003C87F8 /* TestWindow.hpp in Headers */,
+				388FB24A261D378C003C87F8 /* Camera.hpp in Headers */,
 				384BEB3B25D884D400E128B8 /* cgHeightMap.hpp in Headers */,
 				388FB240261CE85D003C87F8 /* Renderable.hpp in Headers */,
+				388FB245261D1B51003C87F8 /* Voxel.hpp in Headers */,
 				388FB09A261ACA73003C87F8 /* Renderer.hpp in Headers */,
 				38B8698725D3A89100024E0D /* plotWindow.h in Headers */,
 				384BEB4F25E2225F00E128B8 /* Mesh.hpp in Headers */,
@@ -354,6 +370,8 @@
 				381B65A225CF4D2E00B7FB07 /* cgLog.cpp in Sources */,
 				381B65AB25CF631900B7FB07 /* cgTiming.cpp in Sources */,
 				3811C09725D859A40033D474 /* cgHeightMap.cpp in Sources */,
+				388FB243261D1B51003C87F8 /* Voxel.cpp in Sources */,
+				388FB248261D378C003C87F8 /* Camera.cpp in Sources */,
 				381B65A525CF4D2E00B7FB07 /* cgVertexArray.cpp in Sources */,
 				381B65A725CF4D2E00B7FB07 /* cgVec.cpp in Sources */,
 				381B65B425D333CC00B7FB07 /* cgPlotLine.cpp in Sources */,
@@ -378,6 +396,7 @@
 				384BEB3A25D884C200E128B8 /* cgHeightMap.hpp in Sources */,
 				38B8696E25D3A88600024E0D /* glad.c in Sources */,
 				38B8696F25D3A88600024E0D /* plotWindow.cpp in Sources */,
+				388FB249261D378C003C87F8 /* Camera.cpp in Sources */,
 				38B8697025D3A88600024E0D /* plotWindow.h in Sources */,
 				38B8697125D3A88600024E0D /* cgPlotBox.cpp in Sources */,
 				38B8697225D3A88600024E0D /* cgPlotBox.hpp in Sources */,
@@ -391,6 +410,7 @@
 				38B8697925D3A88600024E0D /* Shader.cpp in Sources */,
 				38B8697A25D3A88600024E0D /* cgLog.hpp in Sources */,
 				38B8697B25D3A88600024E0D /* cgVertexArray.cpp in Sources */,
+				388FB244261D1B51003C87F8 /* Voxel.cpp in Sources */,
 				38B8697C25D3A88600024E0D /* cgVertexArray.h in Sources */,
 				38B8697D25D3A88600024E0D /* cgTiming.cpp in Sources */,
 				38B8697E25D3A88600024E0D /* cgTiming.hpp in Sources */,

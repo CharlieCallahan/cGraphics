@@ -24,9 +24,10 @@ struct ColoredVertex{
 };
 struct Triangle{
     ColoredVertex vertices[3];
+    Triangle() {for (int i = 0; i < 3; i++){ this->vertices[i] = ColoredVertex();}}
     Triangle(ColoredVertex* vertices) {for (int i = 0; i < 3; i++){ this->vertices[i] = vertices[i];}}
+    Triangle(ColoredVertex v1,ColoredVertex v2,ColoredVertex v3) {vertices[0] = v1; vertices[1] = v2; vertices[2] = v3;}
 };
-
 class Mesh : public Renderable{
 public:
     Mesh(int numberTriangles){vertexArray = new float[numberTriangles*3*6];};//allocates vertex array for
