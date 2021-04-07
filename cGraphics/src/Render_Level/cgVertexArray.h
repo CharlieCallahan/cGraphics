@@ -10,6 +10,9 @@ public:
 		const void* indexData,
 		unsigned int indexCount,
 		GLenum drawMode);
+    cgVertexArray(const void* vertexData,
+                  unsigned int vertexCount,
+                  GLenum drawMode);
 	~cgVertexArray();
 	void bind();
 	void setVertexAttrPointer(GLuint index,
@@ -23,6 +26,7 @@ public:
 public:
 	unsigned int id;
 private:
+    bool containsElementBuff=false;
 	unsigned int vertexBuffObj;
 	unsigned int elementBuffObj;
 };

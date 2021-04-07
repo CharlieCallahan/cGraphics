@@ -89,4 +89,119 @@ float cg2DFloatArray::min(){
     }
     return min;
 }
+//cgMat4::cgMat4(float xx,float yx,float zx,float wx, float xy,float yy,float zy,float wy, float xz,float yz,float zz,float wz, float xw,float yw,float zw, float ww){
+//    x = cgVec4(xx,xy,xz,xw);
+//    y = cgVec4(yx,yy,yz,yw);
+//    z = cgVec4(zx,zy,zz,zw);
+//    w = cgVec4(wx,wy,wz,ww);
+//}
+cgMat4::cgMat4(float xx,float yx,float zx,float wx,
+               float xy,float yy,float zy,float wy,
+               float xz,float yz,float zz,float wz,
+               float xw,float yw,float zw, float ww){
+    data[0] = xx; //00
+    data[1] = xy; //10
+    data[2] = xz; //20
+    data[3] = xw; //30
+    
+    data[4] = yx; 
+    data[5] = yy; //11
+    data[6] = yz;
+    data[7] = yw;
+    
+    data[8] =  zx;
+    data[9] =  zy;
+    data[10] = zz;
+    data[11] = zw;
+
+    data[12] = wx;
+    data[13] = wy;
+    data[14] = wz;
+    data[15] = ww;
+}
+cgMat4 cgMat4::operator*(const cgMat4& mat){
+    cgMat4 output = cgMat4();
+    float sum;
+    for(int i = 0; i<4;i++){
+        for(int j = 0;j<4;j++){
+            sum = 0;
+            for(int k = 0; k < 4;k++){
+                sum = sum + at(i, k)*mat.at(k,j);
+            }
+            output.set(i, j, sum);
+        }
+    }
+    return output;
+}
+void cgMat4::print(){
+    for(int i = 0; i<4;i++){
+        std::cout << "|";
+        for(int j = 0;j<4;j++){
+            std::cout << at(i, j) << " ";
+        }
+        std::cout << "|\n";
+    }
+}
+cgMat4* translation(float Tx, float Ty, float Tz){
+    return new cgMat4(1, 0, 0, Tx,
+                      0, 1, 0, Ty,
+                      0, 0, 1, Tz,
+                      0, 0, 0, 1);
+}
+void translation(float Tx, float Ty, float Tz, cgMat4& mat){
+    mat.set(0, 3, Tx);
+    mat.set(1, 3, Ty);
+    mat.set(2, 3, Tz);
+}
+cgMat4* scaling(float Sx, float Sy, float Sz){
+    return new cgMat4(Sx, 0, 0, 0,
+                      0, Sy, 0, 0,
+                      0, 0, Sz, 0,
+                      0, 0, 0, 1);
+}
+cgMat4* rotation(cgVec3 axis, float theta){
+    return new cgMat4(cos(theta)+axis.x*axis.x*(1-cos(theta)), axis.x*axis.y*(1-cos(theta))-axis.z*sin(theta), axis.x*axis.z*(1-cos(theta))+axis.y*sin(theta), 0,
+                      
+                     axis.y*axis.x*(1-cos(theta))+axis.z*sin(theta), cos(theta)+axis.y*axis.y*(1-cos(theta)), axis.y*axis.z*(1-cos(theta))-axis.x*sin(theta), 0,
+                      
+                     axis.z*axis.x*(1-cos(theta))-axis.y*sin(theta), axis.z*axis.y*(1-cos(theta))+axis.x*sin(theta), cos(theta)+axis.z*axis.z*(1-cos(theta)), 0,
+                      
+                     0, 0, 0, 1);
+}
+void rotation(cgVec3 axis, float theta, cgMat4& mat){
+    mat.set(0, 0, cos(theta)+axis.x*axis.x*(1-cos(theta)));
+    mat.set(0, 1, axis.x*axis.y*(1-cos(theta))-axis.z*sin(theta));
+    mat.set(0, 2, axis.x*axis.z*(1-cos(theta))+axis.y*sin(theta));
+    mat.set(0, 3, 0);
+    
+    mat.set(1, 0, axis.y*axis.x*(1-cos(theta))+axis.z*sin(theta));
+    mat.set(1, 1, cos(theta)+axis.y*axis.y*(1-cos(theta)));
+    mat.set(1, 2, axis.y*axis.z*(1-cos(theta))-axis.x*sin(theta));
+    mat.set(1, 3, 0);
+    
+    mat.set(2, 0, axis.z*axis.x*(1-cos(theta))-axis.y*sin(theta));
+    mat.set(2, 1, axis.z*axis.y*(1-cos(theta))+axis.x*sin(theta));
+    mat.set(2, 2, cos(theta)+axis.z*axis.z*(1-cos(theta)));
+    mat.set(2, 3, 0);
+    
+    mat.set(3, 0, 0);mat.set(3, 1, 0);mat.set(3, 2, 0);mat.set(3, 3, 1);
+}
+cgMat4* projectionMatrix(float n, float r, float t, float f){
+    return new cgMat4(n/r, 0, 0, 0,
+                      0, n/t, 0, 0,
+                      0, 0, -(f+n)/(f-n), -2*f*n/(f-n),
+                      0, 0, -1, 0);
+}
+cgMat4* projectionMatrixSimple(float aspect, float fov, float n, float f){
+    return new cgMat4(1/(aspect*tan(fov/2)), 0, 0, 0,
+                       0, 1/(aspect*tan(fov/2)), 0, 0,
+                       0, 0, -(f+n)/(f-n), -1,
+                      0, 0, -2*f*n/(f-n), 0);
+}
+cgMat4* orthoProjection(float n, float r, float t, float f){
+    return new cgMat4(1/r, 0, 0, 0,
+                      0, 1/t, 0, 0,
+                      0, 0, -2/(f-n), -(f+n)/(f-n),
+                      0, 0, 0, 1);
+}
 
