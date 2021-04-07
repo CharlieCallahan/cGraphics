@@ -7,5 +7,6 @@ int main()
 {
     TestWindow* tw = new TestWindow();
     tw->run();
+    std::cout <<"done";
 }
 
