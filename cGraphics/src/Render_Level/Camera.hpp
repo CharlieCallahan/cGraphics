@@ -20,6 +20,10 @@ public:
     void setRot(cgVec3 aboutAxis, float angle);
     void setPos(cgVec3 pos);
     cgMat4 sceneTransform();
+public:
+    cgVec3 cameraNormal;
+    cgVec3 cameraY;//y and x of normal plane to cameraNormal
+    cgVec3 cameraX;
 private:
     //transforms to be applied to the scene
     cgMat4* proj;

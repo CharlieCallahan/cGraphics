@@ -89,12 +89,32 @@ float cg2DFloatArray::min(){
     }
     return min;
 }
-//cgMat4::cgMat4(float xx,float yx,float zx,float wx, float xy,float yy,float zy,float wy, float xz,float yz,float zz,float wz, float xw,float yw,float zw, float ww){
-//    x = cgVec4(xx,xy,xz,xw);
-//    y = cgVec4(yx,yy,yz,yw);
-//    z = cgVec4(zx,zy,zz,zw);
-//    w = cgVec4(wx,wy,wz,ww);
-//}
+cgVec3 cgVec3::crossProd(const cgVec3& vector){
+    cgVec3 output = cgVec3(y*vector.z - z*vector.y,z*vector.x - x*vector.z,x*vector.y-y*vector.x);
+    return output;
+}
+void cgVec3::normalize(){
+    float r = norm();
+    x = x/r;
+    y = y/r;
+    z = z/r;
+}
+float cgVec3::norm(){
+    return sqrt(x*x+y*y+z*z);
+}
+cgVec3 cgVec3::matMult4(cgMat4 mat){
+    cgVec3 output = cgVec3();
+    float sum = 0;
+    for (int i = 0; i<3; i++){
+        sum = 0;
+        for (int j = 0; j < 3; j++){
+            sum+=at(j)*mat.at(i,j);
+        }
+        sum+= mat.at(i, 3);
+        output.set(i, sum);
+    }
+    return output;
+}
 cgMat4::cgMat4(float xx,float yx,float zx,float wx,
                float xy,float yy,float zy,float wy,
                float xz,float yz,float zz,float wz,

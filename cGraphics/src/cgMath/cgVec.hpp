@@ -39,26 +39,6 @@ public:
 private:
     float**data;
 };
-struct cgVec3{
-    float x;
-    float y;
-    float z;
-    cgVec3(){this->x = 0;this->y = 0;this->z = 0;};
-    cgVec3(float x,float y, float z){this->x = x;this->y = y;this->z = z;};
-    cgVec3(const cgVec3& vec1){x = vec1.x;y = vec1.y;z = vec1.z;}
-    cgVec3 operator+(const cgVec3& vector) {return cgVec3(vector.x+x,vector.y+y,vector.z+z);}
-    cgVec3 operator-(const cgVec3& vector) {return cgVec3(vector.x-x,vector.y-y,vector.z-z);}
-    void normalize();
-    void norm(); 
-};
-struct cgVec4{
-    float x;
-    float y;
-    float z;
-    float w;
-    cgVec4(float x,float y, float z,float w){this->x = x;this->y = y;this->z = z;this->w = w;};
-    cgVec4(){this->x = 0;this->y = 0;this->z = 0;this->w = 0;}
-};
 struct cgMat4{
     float data[16];
     cgMat4(float xx,float xy,float xz,float xw, float yx,float yy,float yz,float yw, float zx,float zy,float zz,float zw, float wx,float wy,float wz, float ww);
@@ -69,6 +49,35 @@ struct cgMat4{
     cgMat4 operator*(const cgMat4& mat);
     void print();
 };
+struct cgVec3{
+    float x;
+    float y;
+    float z;
+    cgVec3(){this->x = 0;this->y = 0;this->z = 0;};
+    cgVec3(float x,float y, float z){this->x = x;this->y = y;this->z = z;};
+    cgVec3(const cgVec3& vec1){x = vec1.x;y = vec1.y;z = vec1.z;}
+    float at(int index){return *(((float*)this)+index);};
+    void set(int index, float to){ *(((float*)this)+index) = to;};
+    void print(){std::cout <<"("<< x <<", " << y << ", " << z << ", " << " )\n";}
+    void add(cgVec3 vec){x = x+vec.x;y = y+vec.y;z = z+vec.z;}
+    cgVec3 operator+(const cgVec3& vector) {return cgVec3(vector.x+x,vector.y+y,vector.z+z);}
+    cgVec3 operator-(const cgVec3& vector) {return cgVec3(vector.x-x,vector.y-y,vector.z-z);}
+    cgVec3 operator*(const float scalar) {return cgVec3(x*scalar,y*scalar,z*scalar);}
+    cgVec3 crossProd(const cgVec3& vector);
+    cgVec3 matMult4(cgMat4 mat); //trasnforms 3d vector in the same way as shader
+    void normalize();
+    float norm(); 
+};
+struct cgVec4{
+    float x;
+    float y;
+    float z;
+    float w;
+    cgVec4(float x,float y, float z,float w){this->x = x;this->y = y;this->z = z;this->w = w;};
+    cgVec4(){this->x = 0;this->y = 0;this->z = 0;this->w = 0;}
+    cgVec4(cgVec3 vec){this->x = vec.x;this->y = vec.y;this->z = vec.z;this->w = 1.0;}//sets the last element to 1
+};
+
 cgMat4* translation(float Tx, float Ty, float Tz);
 void translation(float Tx, float Ty, float Tz, cgMat4& mat);
 cgMat4* scaling(float Sx, float Sy, float Sz);
