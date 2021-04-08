@@ -25,6 +25,7 @@ private:
     int numVerts;
     cgVertexArray* vao;
     Shader* shader;
+    Mesh* mesh;
 };
 
 

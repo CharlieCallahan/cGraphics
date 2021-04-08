@@ -41,6 +41,10 @@
 		388FB248261D378C003C87F8 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388FB246261D378C003C87F8 /* Camera.cpp */; };
 		388FB249261D378C003C87F8 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388FB246261D378C003C87F8 /* Camera.cpp */; };
 		388FB24A261D378C003C87F8 /* Camera.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 388FB247261D378C003C87F8 /* Camera.hpp */; };
+		388FB24C261E6B19003C87F8 /* stb_image.h in Headers */ = {isa = PBXBuildFile; fileRef = 388FB24B261E6B19003C87F8 /* stb_image.h */; };
+		388FB24F261EAC91003C87F8 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388FB24D261EAC91003C87F8 /* Texture.cpp */; };
+		388FB250261EAC91003C87F8 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388FB24D261EAC91003C87F8 /* Texture.cpp */; };
+		388FB251261EAC91003C87F8 /* Texture.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 388FB24E261EAC91003C87F8 /* Texture.hpp */; };
 		38B8696C25D3A80C00024E0D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3843EF5D25CD079D004EAD53 /* OpenGL.framework */; };
 		38B8696D25D3A86000024E0D /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3843EF5A25CD0604004EAD53 /* libglfw.3.3.dylib */; };
 		38B8696E25D3A88600024E0D /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 381B659E25CF4D2D00B7FB07 /* glad.c */; };
@@ -108,7 +112,6 @@
 		381B659F25CF4D2D00B7FB07 /* default.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = default.fs; sourceTree = "<group>"; };
 		381B65A925CF631900B7FB07 /* cgTiming.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cgTiming.cpp; sourceTree = "<group>"; };
 		381B65AA25CF631900B7FB07 /* cgTiming.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cgTiming.hpp; sourceTree = "<group>"; };
-		381B65AC25D0687000B7FB07 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
 		381B65AE25D3319100B7FB07 /* Drawable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Drawable.h; sourceTree = "<group>"; };
 		381B65AF25D3321400B7FB07 /* cgPlotBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cgPlotBox.cpp; sourceTree = "<group>"; };
 		381B65B025D3321400B7FB07 /* cgPlotBox.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cgPlotBox.hpp; sourceTree = "<group>"; };
@@ -130,6 +133,9 @@
 		388FB242261D1B51003C87F8 /* Voxel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Voxel.hpp; sourceTree = "<group>"; };
 		388FB246261D378C003C87F8 /* Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
 		388FB247261D378C003C87F8 /* Camera.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
+		388FB24B261E6B19003C87F8 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		388FB24D261EAC91003C87F8 /* Texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
+		388FB24E261EAC91003C87F8 /* Texture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Texture.hpp; sourceTree = "<group>"; };
 		38B8696825D3A78100024E0D /* libcgPlot.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcgPlot.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -187,6 +193,8 @@
 				388FB23D261CE85D003C87F8 /* Renderable.hpp */,
 				388FB246261D378C003C87F8 /* Camera.cpp */,
 				388FB247261D378C003C87F8 /* Camera.hpp */,
+				388FB24D261EAC91003C87F8 /* Texture.cpp */,
+				388FB24E261EAC91003C87F8 /* Texture.hpp */,
 			);
 			path = Render_Level;
 			sourceTree = "<group>";
@@ -248,9 +256,9 @@
 		3843EF4025CCF62E004EAD53 /* cGraphics */ = {
 			isa = PBXGroup;
 			children = (
+				388FB24B261E6B19003C87F8 /* stb_image.h */,
 				381B659F25CF4D2D00B7FB07 /* default.fs */,
 				388FB23B261BF168003C87F8 /* meshShader.vs */,
-				381B65AC25D0687000B7FB07 /* stb_image.h */,
 				381B658925CF4D2D00B7FB07 /* default.vs */,
 				381B659E25CF4D2D00B7FB07 /* glad.c */,
 				381B658A25CF4D2D00B7FB07 /* main.cpp */,
@@ -279,8 +287,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				388FB251261EAC91003C87F8 /* Texture.hpp in Headers */,
 				388FB09F261ACC27003C87F8 /* TestWindow.hpp in Headers */,
 				388FB24A261D378C003C87F8 /* Camera.hpp in Headers */,
+				388FB24C261E6B19003C87F8 /* stb_image.h in Headers */,
 				384BEB3B25D884D400E128B8 /* cgHeightMap.hpp in Headers */,
 				388FB240261CE85D003C87F8 /* Renderable.hpp in Headers */,
 				388FB245261D1B51003C87F8 /* Voxel.hpp in Headers */,
@@ -380,6 +390,7 @@
 				381B65A125CF4D2E00B7FB07 /* main.cpp in Sources */,
 				381B65A325CF4D2E00B7FB07 /* Shader.cpp in Sources */,
 				381B65B125D3321400B7FB07 /* cgPlotBox.cpp in Sources */,
+				388FB24F261EAC91003C87F8 /* Texture.cpp in Sources */,
 				381B65A425CF4D2E00B7FB07 /* cgWindowBase.cpp in Sources */,
 				384BEB4D25E2225F00E128B8 /* Mesh.cpp in Sources */,
 				381B65A025CF4D2E00B7FB07 /* plotWindow.cpp in Sources */,
@@ -413,6 +424,7 @@
 				388FB244261D1B51003C87F8 /* Voxel.cpp in Sources */,
 				38B8697C25D3A88600024E0D /* cgVertexArray.h in Sources */,
 				38B8697D25D3A88600024E0D /* cgTiming.cpp in Sources */,
+				388FB250261EAC91003C87F8 /* Texture.cpp in Sources */,
 				38B8697E25D3A88600024E0D /* cgTiming.hpp in Sources */,
 				38B8697F25D3A88600024E0D /* cgQuad.cpp in Sources */,
 				38B8698025D3A88600024E0D /* cgQuad.h in Sources */,

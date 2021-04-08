@@ -29,11 +29,10 @@ private:
     Camera* camera;
     cgVec3 pos;
     float theta = 0;
-    
     float ar = 1/.6;
     float fov = 1.5;
     float n = .3;
-    float f = 50;
+    float f = 5000;
     
 };
 #endif /* TestWindow_hpp */

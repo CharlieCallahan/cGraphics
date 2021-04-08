@@ -14,8 +14,9 @@ TestWindow::TestWindow()
     shader = new Shader("/Users/charlescallahan/Desktop/cGraphics/cGraphics/meshShader.vs","/Users/charlescallahan/Desktop/cGraphics/cGraphics/default.fs");
     renderer = new Renderer(shader);
     camera = new Camera(fov, n, f, ar);
-    mesh = new Mesh(12);
-    Voxel v = Voxel(cgVec3(0, 0, .5), .9);
+    Texture* texture = new Texture("/Users/charlescallahan/Desktop/testTexture.jpeg");
+    mesh = new Mesh(12,texture);
+    Voxel v = Voxel(cgVec3(0, 0, .5), .3);
     v.addToMesh(*mesh);
     renderer->attach(*mesh, GL_DYNAMIC_DRAW);
     cgVec3 pos = cgVec3();
@@ -42,7 +43,6 @@ void TestWindow::processInput(){
         pos.add(camera->cameraX*delta);
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
         pos.add(camera->cameraX*(-delta));
-    
     if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS)
         theta = theta+delta;
     if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)

@@ -18,9 +18,9 @@ Voxel::Voxel(cgVec3 center, float sideLength){
     corners[5] = cgVec3(center.x+hl,center.y-hl,center.z-hl);
     corners[6] = cgVec3(center.x+hl,center.y-hl,center.z+hl);
     corners[7] = cgVec3(center.x-hl,center.y-hl,center.z+hl);
-    cgColor color1 = cgColor(1, 0, 0);
+    cgColor color1 = cgColor(1, 0, 1);
     cgColor color2 = cgColor(0, 1, 0);
-    cgColor color3 = cgColor(0, 0, 1);
+    cgColor color3 = cgColor(0, 1, 1);
     triangles[0] = Triangle(ColoredVertex(corners[0], color1),ColoredVertex(corners[1], color2),ColoredVertex(corners[4], color3));
     triangles[1] = Triangle(ColoredVertex(corners[1], color1),ColoredVertex(corners[4], color3),ColoredVertex(corners[5], color2));
     

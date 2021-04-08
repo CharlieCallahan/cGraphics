@@ -9,7 +9,7 @@
 #include "Mesh.hpp"
 void Mesh::addTriangle(Triangle triangle){
     float* tempArr = (float*)(&triangle);
-    for(int i = 0; i < 3*6; i++){
+    for(int i = 0; i < 3*8; i++){
         vertexArray[currentVertex] = tempArr[i];
         currentVertex++;
     }

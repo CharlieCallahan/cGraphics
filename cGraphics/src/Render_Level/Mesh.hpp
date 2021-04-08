@@ -14,13 +14,15 @@
 #include "cgColor.h"
 #include "cgVertexArray.h"
 #include "Renderable.hpp"
+#include "Texture.hpp"
 
 struct ColoredVertex{
     cgVec3 position = cgVec3();
     cgColor color = cgColor();
-    ColoredVertex(){position = cgVec3();color = cgColor();}
+    cgVec2 textCoords = cgVec2();
+    ColoredVertex(){position = cgVec3();color = cgColor();textCoords = cgVec2();}
     ColoredVertex(const ColoredVertex& otherVertex){position = otherVertex.position; color = otherVertex.color;}
-    ColoredVertex(cgVec3 pos, cgColor color){this->position = pos;this->color = color;}
+    ColoredVertex(cgVec3 pos, cgColor color){this->position = pos;this->color = color; this->textCoords = cgVec2(pos.x,pos.y);}
 };
 struct Triangle{
     ColoredVertex vertices[3];
@@ -30,8 +32,8 @@ struct Triangle{
 };
 class Mesh : public Renderable{
 public:
-    Mesh(int numberTriangles){vertexArray = new float[numberTriangles*3*6];};//allocates vertex array for
-    ~Mesh(){delete vertexArray;};
+    Mesh(int numberTriangles, Texture* texture){vertexArray = new float[numberTriangles*3*8]; this->texture = texture;}//allocates vertex array for
+    ~Mesh(){delete vertexArray;delete texture;}
     void addTriangle(Triangle triangle);
     virtual void* getVertexData() override {return vertexArray;}
     virtual int getNumVerts() override {return currentVertex;}
@@ -39,5 +41,6 @@ public:
     float* vertexArray;
     int numberTriangles;
     int currentVertex = 0;
+    Texture* texture;
 };
 #endif /* Mesh_hpp */
