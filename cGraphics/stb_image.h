@@ -116,9 +116,6 @@ RECENT REVISION HISTORY:
     Ryan C. Gordon          [reserved]                              [reserved]
                      DO NOT ADD YOUR NAME HERE
 
-  To add your name to the credits, pick a random blank space in the middle and fill it.
-  80% of merge conflicts on stb PRs are due to people adding their name at the end
-  of the credits.
 */
 
 #ifndef STBI_INCLUDE_STB_IMAGE_H
