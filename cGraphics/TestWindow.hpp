@@ -13,26 +13,26 @@
 #include "cgWindowBase.h"
 #include "Renderer.hpp"
 #include "cgLog.hpp"
-#include "Voxel.hpp"
+//#include "Voxel.hpp"
 #include "Camera.hpp"
 
 class TestWindow: public cgWindowBase{
 public:
     TestWindow();
-    ~TestWindow(){delete renderer; delete shader; delete mesh;delete camera;};
+    ~TestWindow(){delete renderer; delete shader;delete camera;delete mesh; delete texture;};
     virtual void draw() override;
     virtual void processInput() override;
 private:
     Renderer* renderer;
     Shader* shader;
-    Mesh* mesh;
     Camera* camera;
     cgVec3 pos;
+    Mesh* mesh;
+    Texture* texture;
     float theta = 0;
     float ar = 1/.6;
     float fov = 1.5;
     float n = .3;
     float f = 5000;
-    
 };
 #endif /* TestWindow_hpp */

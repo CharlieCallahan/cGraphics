@@ -15,32 +15,35 @@
 #include "cgVertexArray.h"
 #include "Renderable.hpp"
 #include "Texture.hpp"
+#include <fstream>
+#include <vector>
 
-struct ColoredVertex{
-    cgVec3 position = cgVec3();
-    cgColor color = cgColor();
-    cgVec2 textCoords = cgVec2();
-    ColoredVertex(){position = cgVec3();color = cgColor();textCoords = cgVec2();}
-    ColoredVertex(const ColoredVertex& otherVertex){position = otherVertex.position; color = otherVertex.color;}
-    ColoredVertex(cgVec3 pos, cgColor color){this->position = pos;this->color = color; this->textCoords = cgVec2(pos.x,pos.y);}
+struct cgVertex{
+    cgVec3 pos;
+    cgVec3 norm;
+    cgVec2 text;
+    cgVertex(cgVec3 position, cgVec3 normal, cgVec2 textPos){pos = position; norm = normal;text = textPos;}
+    cgVertex(){pos = cgVec3(); norm = cgVec3();text = cgVec2();}
+    void print(){std::cout << "pos: "; pos.print();std::cout<<"norm: ";norm.print();std::cout<<"text coords: "; text.print();}
 };
 struct Triangle{
-    ColoredVertex vertices[3];
-    Triangle() {for (int i = 0; i < 3; i++){ this->vertices[i] = ColoredVertex();}}
-    Triangle(ColoredVertex* vertices) {for (int i = 0; i < 3; i++){ this->vertices[i] = vertices[i];}}
-    Triangle(ColoredVertex v1,ColoredVertex v2,ColoredVertex v3) {vertices[0] = v1; vertices[1] = v2; vertices[2] = v3;}
+    cgVertex vertices [3];
+    Triangle(cgVertex vert1, cgVertex vert2, cgVertex vert3){vertices[0] = vert1; vertices[1] = vert2; vertices[2] = vert3;};
+    Triangle(){};
+    void print(){vertices[0].print();vertices[1].print();vertices[2].print();}
 };
-class Mesh : public Renderable{
+class Mesh : public Renderable {
 public:
-    Mesh(int numberTriangles, Texture* texture){vertexArray = new float[numberTriangles*3*8]; this->texture = texture;}//allocates vertex array for
-    ~Mesh(){delete vertexArray;delete texture;}
-    void addTriangle(Triangle triangle);
-    virtual void* getVertexData() override {return vertexArray;}
-    virtual int getNumVerts() override {return currentVertex;}
+    Mesh();
+    Mesh(std::string objFilename);
+    virtual void* getVertexData() override {return (float*)triangleData;}
+    virtual int getNumVerts() override {return numberTriangles*3;}
+    void attachTexture(Texture* texture){this->texture = texture;};
+    
 public:
-    float* vertexArray;
+    Triangle* triangleData;
     int numberTriangles;
-    int currentVertex = 0;
     Texture* texture;
 };
+
 #endif /* Mesh_hpp */

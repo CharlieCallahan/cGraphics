@@ -8,6 +8,7 @@ struct cgVec2{
     float y;
     cgVec2(){};
     cgVec2(float x,float y);
+    void print(){std::cout <<"("<< x <<", " << y << " )\n";}
     cgVec2(const cgVec2& vector); //Copy constructor
     cgVec2 operator+(const cgVec2& vector);
     cgVec2 operator-(const cgVec2& vector);

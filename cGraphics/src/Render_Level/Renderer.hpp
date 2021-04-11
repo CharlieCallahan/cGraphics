@@ -17,7 +17,7 @@
 class Renderer{
 public:
     Renderer(Shader* shader){this->shader = shader;}
-    void attach(Mesh& mesh, GLenum drawMode);
+    void attach(Mesh* mesh, GLenum drawMode);
     void refreshVertices(Renderable& renderableObj,GLenum drawMode);
     ~Renderer(){delete vao;};
     void renderMesh();
