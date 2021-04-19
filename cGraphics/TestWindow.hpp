@@ -11,28 +11,32 @@
 
 #include <stdio.h>
 #include "cgWindowBase.h"
-#include "Renderer.hpp"
 #include "cgLog.hpp"
-//#include "Voxel.hpp"
+#include "Mesh.hpp"
 #include "Camera.hpp"
+#include "Scene.hpp"
 
 class TestWindow: public cgWindowBase{
 public:
     TestWindow();
-    ~TestWindow(){delete renderer; delete shader;delete camera;delete mesh; delete texture;};
+    ~TestWindow(){ delete shader;delete camera;delete cone; delete monkey;};
     virtual void draw() override;
     virtual void processInput() override;
 private:
-    Renderer* renderer;
     Shader* shader;
     Camera* camera;
     cgVec3 pos;
-    Mesh* mesh;
-    Texture* texture;
+    Mesh* cone;
+    Mesh* monkey;
+    Mesh* donut;
+    Texture* cText;
+    Texture* mText;
+    Texture* dText;
+    Scene* scene;
     float theta = 0;
-    float ar = 1/.6;
+    float ar = 4.0/3.0;
     float fov = 1.5;
-    float n = .3;
-    float f = 5000;
+    float n = .1;
+    float f = 10;
 };
 #endif /* TestWindow_hpp */

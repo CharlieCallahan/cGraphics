@@ -19,6 +19,7 @@ class Texture{
 public:
     Texture(std::string filename);
     void bind();
+    void bindUnit(GLint unitNum);
 private:
     unsigned int texture;
 };

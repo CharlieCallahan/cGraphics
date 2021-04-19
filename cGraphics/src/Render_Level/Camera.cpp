@@ -9,6 +9,7 @@
 #include "Camera.hpp"
 Camera::Camera(float fov, float zNear, float zFar, float aspectRatio){
     proj = projectionMatrixSimple(aspectRatio, fov, zNear, zFar);
+    //(float aspect, float fov, float n, float f)
     trans = translation(0, 0, 0);
     rot = rotation(cgVec3(0, 0, 1), 0);
     cameraNormal = cgVec3(0,0,1);

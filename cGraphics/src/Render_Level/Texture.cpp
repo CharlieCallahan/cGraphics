@@ -38,3 +38,8 @@ Texture::Texture(std::string filename){
 void Texture::bind(){
     glBindTexture(GL_TEXTURE_2D, texture);
 }
+void Texture::bindUnit(GLint unitNum){
+    glActiveTexture(GL_TEXTURE0 + unitNum);
+    glBindTexture(GL_TEXTURE_2D, texture);
+    //glBindTextureUnit(unitNum,texture);
+}

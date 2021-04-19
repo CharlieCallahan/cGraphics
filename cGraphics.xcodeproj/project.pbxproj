@@ -28,13 +28,9 @@
 		384BEB4D25E2225F00E128B8 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384BEB4B25E2225F00E128B8 /* Mesh.cpp */; };
 		384BEB4E25E2225F00E128B8 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384BEB4B25E2225F00E128B8 /* Mesh.cpp */; };
 		384BEB4F25E2225F00E128B8 /* Mesh.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 384BEB4C25E2225F00E128B8 /* Mesh.hpp */; };
-		388FB098261ACA73003C87F8 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388FB096261ACA73003C87F8 /* Renderer.cpp */; };
-		388FB099261ACA73003C87F8 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388FB096261ACA73003C87F8 /* Renderer.cpp */; };
-		388FB09A261ACA73003C87F8 /* Renderer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 388FB097261ACA73003C87F8 /* Renderer.hpp */; };
 		388FB09D261ACC27003C87F8 /* TestWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388FB09B261ACC27003C87F8 /* TestWindow.cpp */; };
 		388FB09E261ACC27003C87F8 /* TestWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388FB09B261ACC27003C87F8 /* TestWindow.cpp */; };
 		388FB09F261ACC27003C87F8 /* TestWindow.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 388FB09C261ACC27003C87F8 /* TestWindow.hpp */; };
-		388FB240261CE85D003C87F8 /* Renderable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 388FB23D261CE85D003C87F8 /* Renderable.hpp */; };
 		388FB243261D1B51003C87F8 /* Voxel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388FB241261D1B51003C87F8 /* Voxel.cpp */; };
 		388FB244261D1B51003C87F8 /* Voxel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388FB241261D1B51003C87F8 /* Voxel.cpp */; };
 		388FB245261D1B51003C87F8 /* Voxel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 388FB242261D1B51003C87F8 /* Voxel.hpp */; };
@@ -73,6 +69,9 @@
 		38B8698525D3A88600024E0D /* cgVec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659C25CF4D2D00B7FB07 /* cgVec.cpp */; };
 		38B8698625D3A88600024E0D /* cgVec.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659D25CF4D2D00B7FB07 /* cgVec.hpp */; };
 		38B8698725D3A89100024E0D /* plotWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 381B658B25CF4D2D00B7FB07 /* plotWindow.h */; };
+		38D762A7262B90340005560E /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38D762A5262B90340005560E /* Scene.cpp */; };
+		38D762A8262B90340005560E /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38D762A5262B90340005560E /* Scene.cpp */; };
+		38D762A9262B90340005560E /* Scene.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 38D762A6262B90340005560E /* Scene.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -123,12 +122,9 @@
 		3843EF5D25CD079D004EAD53 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		384BEB4B25E2225F00E128B8 /* Mesh.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = "<group>"; };
 		384BEB4C25E2225F00E128B8 /* Mesh.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Mesh.hpp; sourceTree = "<group>"; };
-		388FB096261ACA73003C87F8 /* Renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
-		388FB097261ACA73003C87F8 /* Renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
 		388FB09B261ACC27003C87F8 /* TestWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestWindow.cpp; sourceTree = "<group>"; };
 		388FB09C261ACC27003C87F8 /* TestWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestWindow.hpp; sourceTree = "<group>"; };
 		388FB23B261BF168003C87F8 /* meshShader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = meshShader.vs; sourceTree = "<group>"; };
-		388FB23D261CE85D003C87F8 /* Renderable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Renderable.hpp; sourceTree = "<group>"; };
 		388FB241261D1B51003C87F8 /* Voxel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Voxel.cpp; sourceTree = "<group>"; };
 		388FB242261D1B51003C87F8 /* Voxel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Voxel.hpp; sourceTree = "<group>"; };
 		388FB246261D378C003C87F8 /* Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
@@ -137,6 +133,8 @@
 		388FB24D261EAC91003C87F8 /* Texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
 		388FB24E261EAC91003C87F8 /* Texture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Texture.hpp; sourceTree = "<group>"; };
 		38B8696825D3A78100024E0D /* libcgPlot.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcgPlot.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		38D762A5262B90340005560E /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		38D762A6262B90340005560E /* Scene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,8 +174,6 @@
 		381B658D25CF4D2D00B7FB07 /* Render_Level */ = {
 			isa = PBXGroup;
 			children = (
-				388FB096261ACA73003C87F8 /* Renderer.cpp */,
-				388FB097261ACA73003C87F8 /* Renderer.hpp */,
 				381B658E25CF4D2D00B7FB07 /* cgLog.cpp */,
 				381B658F25CF4D2D00B7FB07 /* cgWindowBase.h */,
 				381B659225CF4D2D00B7FB07 /* cgWindowBase.cpp */,
@@ -190,11 +186,12 @@
 				381B65AA25CF631900B7FB07 /* cgTiming.hpp */,
 				384BEB4B25E2225F00E128B8 /* Mesh.cpp */,
 				384BEB4C25E2225F00E128B8 /* Mesh.hpp */,
-				388FB23D261CE85D003C87F8 /* Renderable.hpp */,
 				388FB246261D378C003C87F8 /* Camera.cpp */,
 				388FB247261D378C003C87F8 /* Camera.hpp */,
 				388FB24D261EAC91003C87F8 /* Texture.cpp */,
 				388FB24E261EAC91003C87F8 /* Texture.hpp */,
+				38D762A5262B90340005560E /* Scene.cpp */,
+				38D762A6262B90340005560E /* Scene.hpp */,
 			);
 			path = Render_Level;
 			sourceTree = "<group>";
@@ -292,9 +289,8 @@
 				388FB24A261D378C003C87F8 /* Camera.hpp in Headers */,
 				388FB24C261E6B19003C87F8 /* stb_image.h in Headers */,
 				384BEB3B25D884D400E128B8 /* cgHeightMap.hpp in Headers */,
-				388FB240261CE85D003C87F8 /* Renderable.hpp in Headers */,
 				388FB245261D1B51003C87F8 /* Voxel.hpp in Headers */,
-				388FB09A261ACA73003C87F8 /* Renderer.hpp in Headers */,
+				38D762A9262B90340005560E /* Scene.hpp in Headers */,
 				38B8698725D3A89100024E0D /* plotWindow.h in Headers */,
 				384BEB4F25E2225F00E128B8 /* Mesh.hpp in Headers */,
 			);
@@ -385,11 +381,11 @@
 				381B65A525CF4D2E00B7FB07 /* cgVertexArray.cpp in Sources */,
 				381B65A725CF4D2E00B7FB07 /* cgVec.cpp in Sources */,
 				381B65B425D333CC00B7FB07 /* cgPlotLine.cpp in Sources */,
-				388FB098261ACA73003C87F8 /* Renderer.cpp in Sources */,
 				388FB09D261ACC27003C87F8 /* TestWindow.cpp in Sources */,
 				381B65A125CF4D2E00B7FB07 /* main.cpp in Sources */,
 				381B65A325CF4D2E00B7FB07 /* Shader.cpp in Sources */,
 				381B65B125D3321400B7FB07 /* cgPlotBox.cpp in Sources */,
+				38D762A7262B90340005560E /* Scene.cpp in Sources */,
 				388FB24F261EAC91003C87F8 /* Texture.cpp in Sources */,
 				381B65A425CF4D2E00B7FB07 /* cgWindowBase.cpp in Sources */,
 				384BEB4D25E2225F00E128B8 /* Mesh.cpp in Sources */,
@@ -409,6 +405,7 @@
 				38B8696F25D3A88600024E0D /* plotWindow.cpp in Sources */,
 				388FB249261D378C003C87F8 /* Camera.cpp in Sources */,
 				38B8697025D3A88600024E0D /* plotWindow.h in Sources */,
+				38D762A8262B90340005560E /* Scene.cpp in Sources */,
 				38B8697125D3A88600024E0D /* cgPlotBox.cpp in Sources */,
 				38B8697225D3A88600024E0D /* cgPlotBox.hpp in Sources */,
 				38B8697325D3A88600024E0D /* cgPlotLine.cpp in Sources */,
@@ -434,7 +431,6 @@
 				388FB09E261ACC27003C87F8 /* TestWindow.cpp in Sources */,
 				38B8698425D3A88600024E0D /* cGraphics.h in Sources */,
 				38B8698525D3A88600024E0D /* cgVec.cpp in Sources */,
-				388FB099261ACA73003C87F8 /* Renderer.cpp in Sources */,
 				38B8698625D3A88600024E0D /* cgVec.hpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

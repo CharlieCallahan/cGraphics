@@ -13,7 +13,10 @@ public:
     cgVertexArray(const void* vertexData,
                   unsigned int vertexCount,
                   GLenum drawMode);
+    cgVertexArray(unsigned int vertexCount,
+                  GLenum drawMode);
 	~cgVertexArray();
+    void addSubData(int offset, int size, const void* data);
 	void bind();
 	void setVertexAttrPointer(GLuint index,
 		GLint count,

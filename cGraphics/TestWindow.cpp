@@ -10,24 +10,31 @@
 
 TestWindow::TestWindow()
 : cgWindowBase(1000,600, "Test Window"){
-    glEnable(GL_CULL_FACE);
-    glEnable(GL_DEPTH_CLAMP);
+    //glEnable(GL_CULL_FACE);
+    //glDepthRange(0,100);
+    glEnable(GL_DEPTH_TEST);
+    //glEnable(GL_DEPTH_CLAMP);
     shader = new Shader("/Users/charlescallahan/Desktop/cGraphics/cGraphics/meshShader.vs","/Users/charlescallahan/Desktop/cGraphics/cGraphics/default.fs");
-    renderer = new Renderer(shader);
     camera = new Camera(fov, n, f, ar);
-    mesh = new Mesh("/Users/charlescallahan/Desktop/monkey.obj");
-    texture = new Texture("/Users/charlescallahan/Desktop/monkeyText.jpg");
-    mesh->attachTexture(texture);
-    renderer->attach(mesh, GL_DYNAMIC_DRAW);
-}
+    cone = new Mesh("/Users/charlescallahan/Desktop/cone.obj");
+    monkey = new Mesh("/Users/charlescallahan/Desktop/monkey.obj");
+    donut = new Mesh("/Users/charlescallahan/Desktop/donut.obj");
+    cText = new Texture("/Users/charlescallahan/Desktop/coneText.jpg");
+    mText = new Texture("/Users/charlescallahan/Desktop/monkeyText.jpg");
+    dText = new Texture("/Users/charlescallahan/Desktop/donut.jpg");
+    donut->attachTexture(dText);
+    cone->attachTexture(cText);
+    monkey->attachTexture(mText);
+    scene = new Scene(shader);
+    //scene->addMesh(cone);
+    scene->addMesh(donut);
+    scene->generateVAO();
+    cgLogOpenGLErrors();
+    }
 void TestWindow::draw(){
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
-    shader->use();
-    std::string name = "sceneTransform";
-    cgMat4 sceneTrans = camera->sceneTransform();
-    shader->setMat4(name, (GLfloat*) &sceneTrans);
-    renderer->renderMesh();
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    scene->render(*camera);
     glfwSwapBuffers(window);
     cgLogOpenGLErrors();
 }
@@ -50,12 +57,6 @@ void TestWindow::processInput(){
         theta = theta+delta;
     if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
         theta = theta-delta;
-//    std::cout << "pos: ";
-//    pos.print();
-//    std::cout << "normal: ";
-//    camera->cameraNormal.print();
-//    std::cout << "X: ";
-//    camera->cameraX.print();
     camera->setRot(cgVec3(0, 1, 0), theta);
     camera->setPos(pos);
     

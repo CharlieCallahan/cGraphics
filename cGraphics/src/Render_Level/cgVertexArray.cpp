@@ -15,14 +15,24 @@ cgVertexArray::cgVertexArray(const void* vertexData, unsigned int vertexCount, c
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 }
-cgVertexArray::cgVertexArray(const void* vertexData,
-              unsigned int vertexCount,
-              GLenum drawMode){
+cgVertexArray::cgVertexArray( const void* vertexData,
+                              unsigned int vertexCount,
+                              GLenum drawMode){
     glGenVertexArrays(1, &id);
     glGenBuffers(1, &vertexBuffObj);
     glBindVertexArray(id);
     glBindBuffer(GL_ARRAY_BUFFER, vertexBuffObj);
     glBufferData(GL_ARRAY_BUFFER, sizeof(float)*vertexCount, vertexData, drawMode);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
+}
+cgVertexArray::cgVertexArray(unsigned int vertexCount,
+                             GLenum drawMode){
+    glGenVertexArrays(1, &id);
+    glGenBuffers(1, &vertexBuffObj);
+    glBindVertexArray(id);
+    glBindBuffer(GL_ARRAY_BUFFER, vertexBuffObj);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(float)*vertexCount, NULL, drawMode);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 }
@@ -64,3 +74,10 @@ void cgVertexArray::setVertexAttrPointer(GLuint index, GLint count, GLenum type,
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 }
 
+void cgVertexArray::addSubData(int offset, int size, const void* data){
+    glBindVertexArray(id);
+    glBindBuffer(GL_ARRAY_BUFFER, vertexBuffObj);
+    glBufferSubData(GL_ARRAY_BUFFER,offset,size,data);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
+}

@@ -13,8 +13,8 @@
 #include "cgVec.hpp"
 #include "cgColor.h"
 #include "cgVertexArray.h"
-#include "Renderable.hpp"
 #include "Texture.hpp"
+#include "Shader.h"
 #include <fstream>
 #include <vector>
 
@@ -22,6 +22,7 @@ struct cgVertex{
     cgVec3 pos;
     cgVec3 norm;
     cgVec2 text;
+    float texIndex = 0;
     cgVertex(cgVec3 position, cgVec3 normal, cgVec2 textPos){pos = position; norm = normal;text = textPos;}
     cgVertex(){pos = cgVec3(); norm = cgVec3();text = cgVec2();}
     void print(){std::cout << "pos: "; pos.print();std::cout<<"norm: ";norm.print();std::cout<<"text coords: "; text.print();}
@@ -32,15 +33,18 @@ struct Triangle{
     Triangle(){};
     void print(){vertices[0].print();vertices[1].print();vertices[2].print();}
 };
-class Mesh : public Renderable {
+class Mesh {
 public:
     Mesh();
     Mesh(std::string objFilename);
-    virtual void* getVertexData() override {return (float*)triangleData;}
-    virtual int getNumVerts() override {return numberTriangles*3;}
-    void attachTexture(Texture* texture){this->texture = texture;};
-    
+    ~Mesh(){delete posTransform; delete triangleData; delete texture;}
+    void* getVertexData() {return (float*)triangleData;}
+    int getNumVerts() {return numberTriangles*3*9;}
+    void attachTexture(Texture* texture){this->texture = texture;}
+    void setTexIndex(int to);
+    void setPosition(cgVec3 position){translation(position.x, position.y, position.z, *posTransform);}
 public:
+    cgMat4* posTransform = translation(0, 0, 0);
     Triangle* triangleData;
     int numberTriangles;
     Texture* texture;

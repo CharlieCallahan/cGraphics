@@ -59,7 +59,6 @@ Mesh::Mesh(std::string objFilename){
     }
     triangleData = new Triangle [int(vertexPosIndices.size()/3)];
     numberTriangles = int(vertexPosIndices.size()/3);
-
     for(int i = 0; i < int(vertexPosIndices.size()/3);i++){
         cgVertex vert1 = cgVertex(tempVertPositions[vertexPosIndices[3*i]-1],tempVertNormals[ normalIndices[3*i]-1], tempTextPos[textPosIndices[3*i]-1]);
 
@@ -68,4 +67,12 @@ Mesh::Mesh(std::string objFilename){
         cgVertex vert3 = cgVertex(tempVertPositions[vertexPosIndices[3*i+2]-1],tempVertNormals[ normalIndices[3*i+2]-1], tempTextPos[textPosIndices[3*i+2]-1]);
         triangleData[i] = Triangle(vert1,vert2,vert3);
                 }
+}
+void Mesh::setTexIndex(int to){
+    float value = float(to);
+    for (int i = 0; i < numberTriangles; i++){
+        triangleData[i].vertices[0].texIndex = value;
+        triangleData[i].vertices[1].texIndex = value;
+        triangleData[i].vertices[2].texIndex = value;
+    }
 }

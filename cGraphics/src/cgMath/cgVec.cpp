@@ -168,6 +168,7 @@ cgMat4* translation(float Tx, float Ty, float Tz){
                       0, 0, 1, Tz,
                       0, 0, 0, 1);
 }
+
 void translation(float Tx, float Ty, float Tz, cgMat4& mat){
     mat.set(0, 3, Tx);
     mat.set(1, 3, Ty);
@@ -213,10 +214,11 @@ cgMat4* projectionMatrix(float n, float r, float t, float f){
                       0, 0, -1, 0);
 }
 cgMat4* projectionMatrixSimple(float aspect, float fov, float n, float f){
-    return new cgMat4(1/(aspect*tan(fov/2)), 0, 0, 0,
-                       0, 1/(aspect*tan(fov/2)), 0, 0,
-                       0, 0, -(f+n)/(f-n), -1,
-                      0, 0, -2*f*n/(f-n), 0);
+    float scale = 1/(aspect*tan(fov/2));
+    return new cgMat4(scale, 0, 0, 0,
+                      0, scale, 0, 0,
+                      0, 0, -f/(f-n), -f*n/(f-n),
+                      0, 0, -1, 0);
 }
 cgMat4* orthoProjection(float n, float r, float t, float f){
     return new cgMat4(1/r, 0, 0, 0,
