@@ -20,21 +20,27 @@ TestWindow::TestWindow()
     monkey = new Mesh("/Users/charlescallahan/Desktop/monkey.obj");
     donut = new Mesh("/Users/charlescallahan/Desktop/donut.obj");
     cText = new Texture("/Users/charlescallahan/Desktop/coneText.jpg");
-    mText = new Texture("/Users/charlescallahan/Desktop/monkeyText.jpg");
     dText = new Texture("/Users/charlescallahan/Desktop/donut.jpg");
+    mText = new Texture("/Users/charlescallahan/Desktop/monkeyText.jpg");
     donut->attachTexture(dText);
-    cone->attachTexture(cText);
     monkey->attachTexture(mText);
-    scene = new Scene(shader);
-    //scene->addMesh(cone);
-    scene->addMesh(donut);
-    scene->generateVAO();
+    monkey->setTransform(cgVec3(1.5, 1.5, 1.5), cgVec3(0, 0, 1), 1);
+    cone->attachTexture(cText);
+    batch = new Batch(shader);
+    batch->addMesh(cone);
+    batch->addMesh(donut);
+    batch->addMesh(monkey);
+    batch->generateVAO();
     cgLogOpenGLErrors();
     }
 void TestWindow::draw(){
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    scene->render(*camera);
+    meshangle+=.1;
+    donut->setTransform(cgVec3(1.5, 1.5, 1.5), cgVec3(0, 0, 1), meshangle);
+    cone->setTransform(cgVec3(-1.5, 1.5, 1.5), cgVec3(0, 1, 0), meshangle);
+    monkey->setTransform(cgVec3(1.5, -1.5, 1.5), cgVec3(1, 0, 0), meshangle);
+    batch->render(*camera);
     glfwSwapBuffers(window);
     cgLogOpenGLErrors();
 }

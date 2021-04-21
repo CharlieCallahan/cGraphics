@@ -1,27 +1,28 @@
 //
-//  Scene.hpp
+//  Batch.hpp
 //  cGraphics
 //
 //  Created by Charles callahan on 4/17/21.
 //  Copyright © 2021 Charles callahan. All rights reserved.
 //
 
-#ifndef Scene_hpp
-#define Scene_hpp
+#ifndef Batch_hpp
+#define Batch_hpp
 
 #include <stdio.h>
 #include <vector>
 #include "Mesh.hpp"
 #include "Camera.hpp"
 
-class Scene{
-    //Contains all meshes in a scene to be rendered
+class Batch{
+    //Contains all meshes in a Batch to be rendered
     //Handles batch rendering and lighting
+    //Supports up to 16 meshes and textures
 public:
-    Scene(Shader* shader){this->shader = shader;};
-    ~Scene(){for(int i = 0; i < meshes.size(); i++){delete meshes[i];} delete vao;}
+    Batch(Shader* shader){this->shader = shader;};
+    ~Batch(){delete vao;}
     void render(Camera& camera);
-    void addMesh(Mesh* mesh){mesh->setTexIndex(meshes.size());meshes.push_back(mesh);}; //Scene handles mesh deletion
+    void addMesh(Mesh* mesh); //Batch handles mesh deletion
     void generateVAO(); //call after attaching all meshes and before rendering
     void refreshMesh(int index); //refreshes vertices, number of vertices must remain constant
 private:
@@ -29,5 +30,6 @@ private:
     cgVertexArray* vao;
     Shader* shader;
     int numberVerts;
+    int samplers[16];
 };
-#endif /* Scene_hpp */
+#endif /* Batch_hpp */

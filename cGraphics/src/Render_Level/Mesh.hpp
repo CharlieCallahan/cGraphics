@@ -37,14 +37,15 @@ class Mesh {
 public:
     Mesh();
     Mesh(std::string objFilename);
-    ~Mesh(){delete posTransform; delete triangleData; delete texture;}
+    ~Mesh(){delete transform; delete triangleData; delete texture;}
     void* getVertexData() {return (float*)triangleData;}
     int getNumVerts() {return numberTriangles*3*9;}
     void attachTexture(Texture* texture){this->texture = texture;}
     void setTexIndex(int to);
-    void setPosition(cgVec3 position){translation(position.x, position.y, position.z, *posTransform);}
+    void setTransform(cgVec3 position, cgVec3 aboutAxis, float angle);
+    void setPosition(cgVec3 position){translation(position.x, position.y, position.z, *transform);}
 public:
-    cgMat4* posTransform = translation(0, 0, 0);
+    cgMat4* transform = translation(0, 0, 0);
     Triangle* triangleData;
     int numberTriangles;
     Texture* texture;

@@ -69,9 +69,9 @@
 		38B8698525D3A88600024E0D /* cgVec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659C25CF4D2D00B7FB07 /* cgVec.cpp */; };
 		38B8698625D3A88600024E0D /* cgVec.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 381B659D25CF4D2D00B7FB07 /* cgVec.hpp */; };
 		38B8698725D3A89100024E0D /* plotWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 381B658B25CF4D2D00B7FB07 /* plotWindow.h */; };
-		38D762A7262B90340005560E /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38D762A5262B90340005560E /* Scene.cpp */; };
-		38D762A8262B90340005560E /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38D762A5262B90340005560E /* Scene.cpp */; };
-		38D762A9262B90340005560E /* Scene.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 38D762A6262B90340005560E /* Scene.hpp */; };
+		38D762A7262B90340005560E /* Batch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38D762A5262B90340005560E /* Batch.cpp */; };
+		38D762A8262B90340005560E /* Batch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38D762A5262B90340005560E /* Batch.cpp */; };
+		38D762A9262B90340005560E /* Batch.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 38D762A6262B90340005560E /* Batch.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -133,8 +133,8 @@
 		388FB24D261EAC91003C87F8 /* Texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
 		388FB24E261EAC91003C87F8 /* Texture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Texture.hpp; sourceTree = "<group>"; };
 		38B8696825D3A78100024E0D /* libcgPlot.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcgPlot.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		38D762A5262B90340005560E /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
-		38D762A6262B90340005560E /* Scene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
+		38D762A5262B90340005560E /* Batch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Batch.cpp; sourceTree = "<group>"; };
+		38D762A6262B90340005560E /* Batch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Batch.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,8 +190,8 @@
 				388FB247261D378C003C87F8 /* Camera.hpp */,
 				388FB24D261EAC91003C87F8 /* Texture.cpp */,
 				388FB24E261EAC91003C87F8 /* Texture.hpp */,
-				38D762A5262B90340005560E /* Scene.cpp */,
-				38D762A6262B90340005560E /* Scene.hpp */,
+				38D762A5262B90340005560E /* Batch.cpp */,
+				38D762A6262B90340005560E /* Batch.hpp */,
 			);
 			path = Render_Level;
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 				388FB24C261E6B19003C87F8 /* stb_image.h in Headers */,
 				384BEB3B25D884D400E128B8 /* cgHeightMap.hpp in Headers */,
 				388FB245261D1B51003C87F8 /* Voxel.hpp in Headers */,
-				38D762A9262B90340005560E /* Scene.hpp in Headers */,
+				38D762A9262B90340005560E /* Batch.hpp in Headers */,
 				38B8698725D3A89100024E0D /* plotWindow.h in Headers */,
 				384BEB4F25E2225F00E128B8 /* Mesh.hpp in Headers */,
 			);
@@ -385,7 +385,7 @@
 				381B65A125CF4D2E00B7FB07 /* main.cpp in Sources */,
 				381B65A325CF4D2E00B7FB07 /* Shader.cpp in Sources */,
 				381B65B125D3321400B7FB07 /* cgPlotBox.cpp in Sources */,
-				38D762A7262B90340005560E /* Scene.cpp in Sources */,
+				38D762A7262B90340005560E /* Batch.cpp in Sources */,
 				388FB24F261EAC91003C87F8 /* Texture.cpp in Sources */,
 				381B65A425CF4D2E00B7FB07 /* cgWindowBase.cpp in Sources */,
 				384BEB4D25E2225F00E128B8 /* Mesh.cpp in Sources */,
@@ -405,7 +405,7 @@
 				38B8696F25D3A88600024E0D /* plotWindow.cpp in Sources */,
 				388FB249261D378C003C87F8 /* Camera.cpp in Sources */,
 				38B8697025D3A88600024E0D /* plotWindow.h in Sources */,
-				38D762A8262B90340005560E /* Scene.cpp in Sources */,
+				38D762A8262B90340005560E /* Batch.cpp in Sources */,
 				38B8697125D3A88600024E0D /* cgPlotBox.cpp in Sources */,
 				38B8697225D3A88600024E0D /* cgPlotBox.hpp in Sources */,
 				38B8697325D3A88600024E0D /* cgPlotLine.cpp in Sources */,

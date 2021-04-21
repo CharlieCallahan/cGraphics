@@ -76,3 +76,13 @@ void Mesh::setTexIndex(int to){
         triangleData[i].vertices[2].texIndex = value;
     }
 }
+void Mesh::setTransform(cgVec3 position, cgVec3 aboutAxis, float angle){
+    cgMat4 rot = cgMat4();
+    rotation(aboutAxis, angle, rot);
+    cgMat4 trans = cgMat4(1, 0, 0, 0,
+                          0, 1, 0, 0,
+                          0, 0, 1, 0,
+                          0, 0, 0, 1);
+    translation(position.x, position.y, position.z, trans);
+    *transform = (trans*rot);
+}

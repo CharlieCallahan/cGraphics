@@ -14,7 +14,7 @@
 #include "cgLog.hpp"
 #include "Mesh.hpp"
 #include "Camera.hpp"
-#include "Scene.hpp"
+#include "Batch.hpp"
 
 class TestWindow: public cgWindowBase{
 public:
@@ -32,7 +32,8 @@ private:
     Texture* cText;
     Texture* mText;
     Texture* dText;
-    Scene* scene;
+    Batch* batch;
+    float meshangle = 0;
     float theta = 0;
     float ar = 4.0/3.0;
     float fov = 1.5;

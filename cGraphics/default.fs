@@ -1,10 +1,12 @@
 #version 330 core
+#define MESHES_PER_BATCH 16 // max number of textures
+
 out vec4 fragColor;
 in vec4 vertexColor;
 in vec2 textCoord;
 in float textIndex;
-//in vec2 textCoord;
-uniform sampler2D textures[2];
+
+uniform sampler2D textures[MESHES_PER_BATCH];
 
 void main()
 {
